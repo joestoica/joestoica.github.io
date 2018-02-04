@@ -56,6 +56,7 @@
 		box-sizing: border-box;
 	}
 
+
 /* Containers */
 
 	.container {
@@ -216,7 +217,13 @@
 	}
 
 /* Grid */
-
+	.rotate90 {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+	}
 	.row {
 		border-bottom: solid 1px transparent;
 		-moz-box-sizing: border-box;
@@ -2197,6 +2204,10 @@
 
 /* Table */
 
+	.tab {
+		 text-indent:40px
+	  }
+
 	.table-wrapper {
 		-webkit-overflow-scrolling: touch;
 		overflow-x: auto;
@@ -2595,7 +2606,7 @@
 
 		#main > section:first-child {
 			border-top: 0;
-		} 
+		}
 
 /* One */
 
