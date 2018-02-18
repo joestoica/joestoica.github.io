@@ -58,6 +58,11 @@
 
 
 /* Containers */
+.centered {
+  position: fixed; /* or absolute */
+  top: 50%;
+  left: 50%;
+}
 
 	.container {
 		margin-left: auto;

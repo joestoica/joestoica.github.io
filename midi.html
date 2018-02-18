@@ -22,6 +22,8 @@
         <li><a href="#one" class="active">Introduction</a></li>
         <li><a href="#two"> February 1st, 2018 </a></li>
         <li><a href="#three"> February 2nd, 2018 </a></li>
+        <li><a href="#four"> February 6th, 2018 </a></li>
+        <li><a href="#five"> February 14th, 2018 </a></li>
       </ul>
     </nav>
     <footer>
@@ -48,6 +50,18 @@
         </div>
       </section>
 
+      <section id="two">
+        <div class="container">
+          <header class="major">
+            <h2>February 1st, 2018</h2>
+            <p>Designing the Piano Circuit</p>
+          </header>
+          <p class="tab">The main idea of this circuit is to think of each individual piano key as a button. When the button is pressed, it will complete the circuit at the assigned node on the arduino, and output the frequency mapped to that specific key. We also wanted
+            to implement a button that would shift the frequency up an octave when it is pressed.
+            <a href="https://www.youtube.com/watch?v=T5bbmaLQoF0&feature=youtu.be"> This video</a> shows the first iteration of the piano and octave switcher in action.</p>
+        </div>
+      </section>
+
       <section id="three">
         <div class="container">
           <header class="major">
@@ -63,18 +77,50 @@
         </div>
       </section>
 
-      <section id="two">
+      <section id="four">
         <div class="container">
           <header class="major">
-            <h2>February 1st, 2018</h2>
-            <p>Designing the Piano Circuit</p>
+            <h2>February 6th, 2018</h2>
+            <p>Switching to Fabric</p>
           </header>
-          <p class="tab">The main idea of this circuit is to think of each individual piano key as a button. When the button is pressed, it will complete the circuit at the assigned node on the arduino, and output the frequency mapped to that specific key. We also wanted
-            to implement a button that would shift the frequency up an octave when it is pressed.
-            <a href="https://www.youtube.com/watch?v=T5bbmaLQoF0&feature=youtu.be"> This video</a> shows the first iteration of the piano and octave switcher in action.</p>
+          <p class="tab">Our team was very concerned about not being able to successfully prototype the pieces of our project. Each key took at most an hour and a half to 3D print (on the lowest settings too), so there was not much time to prototype and design a key
+            that would work well. Moving on, we decided to create a keyboard of cloth using conductive thread to connect its components. We believed this would be a quicker and safer way to create our project quickly and neatly. The programming and code
+            of the circuit would stay the same, however the circuit itself would be changed due to the change in physical material. Due to the volume of inputs and outputs required by our design, we were forced to add another arduino to our model. This
+            created the complication of separating the ground into two parts to avoid both interference and incorrect sounds. The piano was split into two portions of a large sheet of cloth: the bottom half, which contained the ground thread, and the
+            top half, which would house the keys, Arduinos, button, and buzzer. This is what the piano looked like without the circuitry. </p>
+          <a href="#" class="image"><img  src="images/fabric_piano.png" height = 378 width = 507 /> </a>
+          <p class="tab">Once everything was sewn in, connecting to the Arduino proved itself to be very challenging. Due to the large amount of conductive thread all leading into the same board caused the thread to become tangled, and also gave connection issues where
+            threads which shouldn’t touch were exposed to each other. In addition, when the piano was simply resting without no pressure being applied to the key area, the weight of the fabric was often heavy enough to trigger the circuit, thus causing
+            sounds to play without the keyboardist’s touch. Because of the multitude of problems we faced with the fabric and threads, the direction of the project once again turned. </p>
         </div>
       </section>
 
+      <section id="five">
+        <div class="container">
+          <header class="major">
+            <h2>February 14th, 2018</h2>
+            <p>The Final Product</p>
+          </header>
+          <p class="tab">Our final design change redirected us back to the initial idea of the box piano. The box is constructed out of ⅛’’ plywood, and was laser cut to fit together using ¼’’ finger slots. The piano keys were cut from the same plywood, attached to
+            the piano using velcro squares. On the underside of each key was a piece of copper tape with a wire at least three inches long soldered onto it. Once the velcro had been attached to the top side of the box, a small hole was drilled into the
+            top plate of the box. This allowed the wire to be fed into the inside of the box to connect to the Arduino. The top plate of the box also held the grounding circuit for the piano keys. Since two grounding circuits were used, it forms a zigzag
+            pattern, shown below.
+          </p>
+          <a href="#" class="image"><img  src="images/ground.png" height = 189 width = 253 /> </a>
+          <p class="tab"> And here is the bottom of what the keys looked like. </p>
+          <a href="#" class="image"><img  src="images/key.png" height = 189 width = 253 /> </a>
+          <p class="tab">The first six keys on the left side of the keyboard went to the first Arduino, while the second set of six keys went to the other on the right. Each Arduino had its own buzzer, but there was only one octave button that was connected to both
+            Arduinos to ensure that both octaves switched at the same time. This is what the final product looks like.</p>
+          <a href="#" class="image"><img  src="images/final.jpg" height = 378 width = 507 /> </a>
+          <p class="tab"> With the insight we gained from the experience of this project and the opportunity to repeat it, we certainly would have done some things differently. For example, with a more generous amount of time, using 3D printed keys as originally planned
+            would have definitely been better than wooden keys both aesthetically and physically. The grounding circuit on the top plate also proved to be quite frustrating, so finding a cleaner way to ground the keyboard would save both time and copper
+            tape. This project could be more environmentally friendly if the piano was constructed using recycled material instead of plywood, or possibly making the dimensions of the box smaller and shortening the lengths of the wires. </p>
+          <p class="tab"> A good way to make this project more energy efficient would be to implement an on-off switch for the circuit, so the battery wouldn’t be unnecessarily drained when the piano isn’t being used. Another aesthetic improvement that could be made
+            was be in treating and staining or painting the wooden box. Similarly, the piano keys appear and feel rather flimsy, so improving the keys and their playing action would certainly improve the overall enjoyment of playing. The buzzers that
+            were used to produce sound are also fairly quiet, and are also limited to playing one note at a time. If a speaker were used instead of a buzzer, the sounds could be played louder and the programming could be updated to play multiple tones.
+          </p>
+        </div>
+      </section>
 
       <!-- Scripts -->
       <script src="assets/js/jquery.min.js"></script>
