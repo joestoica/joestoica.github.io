@@ -59,6 +59,8 @@ ul {
 				ul.alt li:first-child {
 					border-top: 0;
 					padding-top: 0;
+					border-bottom: 0;
+					padding-bottom: 10em;
 				}
 
 		ul.feature-icons {
@@ -69,11 +71,18 @@ ul {
 			ul.feature-icons li {
 				text-decoration: none;
 				display: inline-block;
-				margin: 0 0 1em 0;
-				padding: 0.35em 0 0 3.5em;
+				margin: 0 0 1.5em 0;
+				padding: 0 0 0 3.5em;
 				position: relative;
 				vertical-align: top;
 				width: 49%;
+			}
+
+			ul.feature-icons li:first-child {
+				border-top: 0;
+				padding-top: 0;
+				margin-bottom: 0em;
+				padding-bottom: 0em;
 			}
 
 				ul.feature-icons li:before {
@@ -106,13 +115,16 @@ ul {
 		}
 
 			ul.icons li {
-				display: block;
-				padding: 0 1em 0 0;
-				width: 450px;
+				display: inline-block;
+				padding: 0.5em 0 0 0;
+				margin-bottom: 0 !important;
+				position: relative;
+				width: 75%;
 			}
 
 				ul.icons li:last-child {
 					padding-right: 0 !important;
+					padding-bottom: 0 !important;
 				}
 
 				ul.icons li .icon:before {
@@ -229,6 +241,10 @@ input, select, textarea {
 
 .tab{
 	text-indent: 50px;
+}
+
+.bold {
+  font-weight:bold;
 }
 
 /* Row */
