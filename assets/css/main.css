@@ -107,7 +107,7 @@ ul {
 
 			ul.icons li {
 				display: block;
-
+				padding: 0 1em 0 0;
 				width: 280px;
 			}
 
