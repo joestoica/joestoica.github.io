@@ -1,0 +1,148 @@
+<!DOCTYPE HTML>
+
+<html>
+
+  <head>
+    <title>2016 Election Map</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  </head>
+
+  <body class="is-preload">
+
+    <!-- Wrapper-->
+    <div id="wrapper">
+
+      <!-- Nav -->
+      <nav id="nav">
+        <a href="#map" class="icon fa-file"><span>Map</span></a>
+        <a href="index.html" class="icon fa-home"><span>Go home</span></a>
+        <a href="#project" class="icon fa-bar-chart"><span>Projects</span></a>
+      </nav>
+
+      <!-- Main -->
+      <div id="main">
+
+        <article id="map" class="panel">
+          <header>
+            <h2>2016 Election Map</h2>
+          </header>
+          <p class="tab">The United States 2016 presidential election seemed like it would
+            be an <a href="http://www.pewresearch.org/fact-tank/2016/11/09/why-2016-election-polls-missed-their-mark/">
+            easy victory for the DNC's Hillary Clinton over the GOP's Donald Trump.</a>            However, Trump came out the victor, depsite having <a href="https://en.wikipedia.org/wiki/United_States_presidential_election,_2016">
+              three million less votes than his opponent. </a>This election
+            has inspired me to dig deeper into the voting data and explore various
+            relationships through almost every county across the nation. Through
+            this investigation, I also wanted to become more familiar with choropleth
+            maps in R, and turn them into interactive maps using the leaflet
+            package.. If you would like to see the code used to make this, click
+            <a href="https://github.com/joestoica/2016-Presidential-Election-Analysis/blob/master/election_analysis.Rmd"> here.
+              </a>
+          </p>
+
+
+          <header>
+            <h2>Examination Through Mapping </h2>
+          </header>
+          <iframe seamless src="./map.html" width="100%" height="500"></iframe>
+
+          <p class="tab">
+            There are a few different ways to explore the map. Clicking on an individual
+            county reveals relevant election data about that specific county,
+            such as the county name, the winnnig candidate, the number of votes
+            each candidate received, and the voting margin between them. The
+            radio buttons in the bottom left allow the map to be shaded in four
+            different way. The first map examines the candidate who won each
+            county, where Clinton is mapped to blue counties and Trump to red.
+            The next map shows the percent margin of each county using a diverging
+            color palette, where the darker the shade of the county, the larger
+            the percent margin is for that candidate. The third and fourth maps
+            are similar to the second, except these show vote margins by candidate.
+          </p>
+
+          <header>
+            <h2>Creation of the Map</h2>
+          </header>
+
+          <p class="tab">
+            Making this map was actually quite a challenge for me. As it turns out, I ended
+            up using three different datasets combined into one larger dataset.
+            One dataset had general party election information by county, another
+            had candidate data by county, and the final was a shapefile to use
+            during the actual creation of the map. The major downfall of this
+            data is that some counties were excluded, so if the candidate data
+            set was missing one county, it had to be removed from the other
+            too. This is why Washington D.C. and the entire state of Alaska
+            were removed from the final map.
+          </p>
+
+          <p class="tab">
+            Once the data was compiled it was smooth sailing. All I had to complete was
+            the palettes, popup, and the map itself. It's worth mentioning that
+            the diverging color palette used in the second map had to be crafted
+            carefully, due to the fact that the color scales darker with larger
+            winning margins. In order to represent the margins accurately, the
+            palettes must scale equally both ways since the two candidates'
+            maximum are different sizes.
+          </p>
+        </article>
+
+        <!-- Work -->
+        <article id="project" class="panel">
+          <header>
+            <h2>
+          Projects
+        </h2>
+          </header>
+          <p>
+            Here is my portfolio on some of the various projects I've worked on!
+          </p>
+          <section>
+            <div class="row">
+              <div class="col-4 col-6-medium col-12-small">
+                <a href="2016_election_map.html" class="image fit"><img src="images/map1.png" alt=""></a>
+                <p>
+                  2016 Election Map
+                </p>
+              </div>
+              <div class="col-4 col-6-medium col-12-small">
+                <a href="#" class="image fit"><img src="images/pic02.jpg" alt=""></a>
+              </div>
+              <div class="col-4 col-6-medium col-12-small">
+                <a href="#" class="image fit"><img src="images/pic03.jpg" alt=""></a>
+              </div>
+              <div class="col-4 col-6-medium col-12-small">
+                <a href="#" class="image fit"><img src="images/pic04.jpg" alt=""></a>
+              </div>
+              <div class="col-4 col-6-medium col-12-small">
+                <a href="#" class="image fit"><img src="images/pic05.jpg" alt=""></a>
+              </div>
+              <div class="col-4 col-6-medium col-12-small">
+                <a href="#" class="image fit"><img src="images/pic06.jpg" alt=""></a>
+              </div>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <!-- Footer -->
+      <div id="footer">
+        <a href="https://twitter.com/Joe_Stoica" class="icon fa-twitter"><span class="label">Twitter</span></a>
+        <a href="https://www.linkedin.com/in/joe-stoica/" class="icon fa-linkedin"><span class="label">Linkedin</span></a>
+        <a href="https://github.com/joestoica" class="icon fa-github"><span class="label">Github</span></a>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+  </body>
+
+</html>
