@@ -1,11 +1,26 @@
 body {
   background-color: #eee;
-  margin-left: 20%;
-font-family: Arial;
+  margin: 0 30% 0 30%;
+  font-family: Arial;
+}
+
+h1{
+  font-size: 100px;
+  margin: 0 0 0 0;
+  text-align: center;
+}
+
+h1 > small{
+  font-size: 50px;
+}
+
+h2 {
+  text-align: center;
+  margin: 0 0 50px 0;
+  font-size: 20px;
 }
 
 .box {
-  width: 75%;
   padding: 0px 0px 0px 0px;
   margin-top: 10px;
   text-indent: 50px;
@@ -18,5 +33,9 @@ font-family: Arial;
 .photo img {
   width: 100%;
   height: 100%;
-  margin: 50px 0px 50px 0px;
+  margin: 20px 0px 20px 0px;
+}
+
+br {
+  line-height: 0;
 }
