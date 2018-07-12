@@ -1,0 +1,23 @@
+/*Blog CSS*/
+
+body {
+  font-family: monospace;
+  background-color: #reee;
+  margin-left: 50%;
+}
+
+.box {
+  width: 1%;
+  padding: 0px 0px 0px 0px;
+  margin-top: 10px;
+  text-indent: 50px;
+}
+
+.photo {
+  text-align: center;
+}
+
+.photo img {
+  width: 85%;
+  height: 50%;
+}
