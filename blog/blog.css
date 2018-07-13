@@ -16,10 +16,6 @@ h1{
   font-size: 40px;
   }
 
-  h1 .fa {
-    text-align: center;
-  }
-
 h2 {
   margin: 10px 15% 10px 15%;
   font-size: 20px;
@@ -54,11 +50,11 @@ p {
     border-radius: 50%;
     background: #2d2d2d;
     color: white;
-    position: absolute;
-    right: 100px;
-    bottom: 0;
+    position: relative;
+
+    right: -310px;
 }
-  .fa::after){
+  .fa::after {
     position: absolute;
     right: 50px;
     bottom: 0;
