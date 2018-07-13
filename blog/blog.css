@@ -1,30 +1,36 @@
 body {
   background-color: #ffff;
-  margin: 0 15% 0 15%;
   font-family: Helvetica;
+  color: #2d2d2d;
 }
 
 h1{
   font-size: 80px;
-  margin: 0 0 0 0;
+  margin: 0 15% 20px 15%;
+  border-bottom: solid 3px;
+  position: relative;
+
 }
 
-h1 > small{
-  font-size: 50px;
-}
+  h1 > small{
+  font-size: 40px;
+  }
+
+  h1 .fa {
+    text-align: center;
+  }
 
 h2 {
-  margin: 20px 0 50px 0;
+  margin: 10px 15% 10px 15%;
   font-size: 20px;
 }
 
 p {
-        line-height: 25px;
+  line-height: 25px;
 }
 
 .box {
-  padding: 0px 0px 0px 0px;
-  margin-top: 10px;
+  margin: 0 15% 0 15%;
   text-indent: 50px;
 }
 
@@ -32,12 +38,32 @@ p {
   text-align: center;
 }
 
-.photo img {
-  width: 100%;
-  height: 100%;
-  margin: 20px 0px 20px 0px;
-}
+  .photo img {
+    width: 100%;
+    height: 100%;
+    margin: 20px 0px 20px 0px;
+  }
 
-br {
-  line-height: 0;
+/* font awesome icons */
+.fa {
+    padding: 10px !important;
+    font-size: 15px !important;
+    width: 15px !important;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    background: #2d2d2d;
+    color: white;
+    position: absolute;
+    right: 100px;
+    bottom: 0;
 }
+  .fa::after){
+    position: absolute;
+    right: 50px;
+    bottom: 0;
+  }
+
+  .fa:hover {
+    opacity: 0.7;
+  }
