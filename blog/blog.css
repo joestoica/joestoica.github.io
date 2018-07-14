@@ -2,31 +2,88 @@ body {
   background-color: #ffff;
   font-family: Helvetica;
   color: #2d2d2d;
+  font-size: 20px;
+}
+
+article {
+  padding: 0 0 0 0;
+}
+
+footer {
+  position: fixed;
+  bottom: 5%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+}
+
+.main {
+  position: static;
+  border-left: solid 1px grey;
+  padding: 0 3% 0 3%;
+  margin: 0 0 0 25%;
+}
+
+.left_bar {
+  position: fixed;
+  margin: 0 75% 0 0;
+  padding: 2% 3% 0 3%;
 }
 
 h1{
   font-size: 80px;
-  margin: 0 15% 20px 15%;
   border-bottom: solid 3px;
   position: relative;
-
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
 }
 
   h1 > small{
-  font-size: 40px;
+    font-size: 40px;
   }
 
 h2 {
-  margin: 10px 15% 10px 15%;
-  font-size: 20px;
+  font-size: 30px;
 }
 
 p {
-  line-height: 25px;
+  line-height: 35px;
 }
 
+ul {
+  text-indent: 0px !important;
+}
+
+li{
+  margin: 0 0 10px 0;
+}
+
+u {
+  text-decoration: none;
+  border-bottom: 1px solid grey;
+  }​
+
+strong {
+  font-size: 20px;
+}
+
+  /* font awesome icons */
+.fa {
+  padding: 20px !important;
+  /* Icon Size*/
+  font-size: 40px !important;
+  text-align: center;
+  text-decoration: none;
+  color: #2d2d2d;
+  position: relative;
+}
+
+  .fa:hover {
+    opacity: 0.7;
+  }
+
 .box {
-  margin: 0 15% 0 15%;
   text-indent: 50px;
 }
 
@@ -34,32 +91,26 @@ p {
   text-align: center;
 }
 
-  .photo img {
-    width: 100%;
-    height: 100%;
-    margin: 20px 0px 20px 0px;
-  }
-
-/* font awesome icons */
-.fa {
-    padding: 10px !important;
-    font-size: 15px !important;
-    width: 15px !important;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 50%;
-    background: #2d2d2d;
-    color: white;
-    position: relative;
-
-    right: -310px;
+.photo img {
+  width: 75%;
+  height: 75%;
+  margin: 20px 0px 20px 0px;
 }
-  .fa::after {
-    position: absolute;
-    right: 50px;
-    bottom: 0;
+
+  #nav {
+    text-align: center;
+    line-height: 20%;
+    cursor: default;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  .fa:hover {
-    opacity: 0.7;
+  #nav a {
+    display: block;
+    height: 50px;
+    line-height: 200px;
+    font-size: 20px;
+    margin: 0 0.25em 0 0.25em;
+
   }
