@@ -7,6 +7,10 @@ body {
 
 article {
     padding: 0 0 0 0;
+    display: block;
+    border-bottom-color: #cfcfcf;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
 }
 
 footer {
@@ -16,9 +20,8 @@ footer {
     text-align: center;
 }
 
-.main {
+main {
     position: static;
-    /*border-left: solid 1px grey;*/
     padding: 0 3% 0 3%;
     margin: 0 0 0 25%;
 }
@@ -31,7 +34,6 @@ footer {
     left: 0;
     overflow-y: auto;
     background-color: #2d2d2d;
-    ;
     text-align: center;
 }
 
@@ -69,11 +71,16 @@ h1 {
 }
 
 h1>small {
-    font-size: 40px;
+    font-size: 45px;
 }
 
 h2 {
     font-size: 30px;
+}
+
+h3 {
+  margin: 0;
+  padding: 0;
 }
 
 p {
@@ -99,10 +106,8 @@ u {
 
 .links {
     list-style-type: none;
-    margin: 0;
+    margin: 25% 0 25% 0 ;
     padding: 0;
-    padding-top: 0px;
-    bottom: 5%;
 }
 
 .links li {
@@ -162,4 +167,13 @@ nav a:first-child {
 
 nav a:last-child {
     border-bottom: solid #cfcfcf 2px;
+}
+
+.tab {
+  text-indent: 50px;
+}
+code{
+  display: inline-block;
+  border: solid 2px #cfcfcf;
+
 }
