@@ -2,7 +2,7 @@ body {
     background-color: #ffff;
     font-family: Helvetica;
     color: #2d2d2d;
-    font-size: 20px;
+    font-size: 15px;
 }
 
 article {
@@ -20,7 +20,7 @@ footer {
     position: static;
     /*border-left: solid 1px grey;*/
     padding: 0 3% 0 3%;
-    margin: 0 0 0 25%;
+    margin: 0 25% 0 0;
 }
 
 .left_bar {
@@ -28,10 +28,9 @@ footer {
     height: 100%;
     position: fixed;
     top: 0;
-    left: 0;
-    overflow-y: auto;
+    right: 0;
+    overflow-y: hidden;
     background-color: #2d2d2d;
-    ;
     text-align: center;
 }
 
@@ -39,29 +38,8 @@ footer {
     border-radius: 100%;
 }
 
-.left {
-    position: absolute;
-    margin: 0 66% 0 0;
-    padding: 2% 3% 0 3%;
-    line-height: 100px;
-}
-
-.right {
-    position: absolute;
-    margin: 0 0 0 66%;
-    padding: 2% 3% 0 3%;
-    line-height: 100px;
-}
-
-.middle {
-    position: absolute;
-    margin: 0 33% 0 33%;
-    padding: 2% 3% 0 3%;
-    line-height: 100px;
-}
-
 h1 {
-    font-size: 80px;
+    font-size: 55px;
     border-bottom: solid 3px;
     position: relative;
     margin-top: 0px !important;
@@ -69,15 +47,16 @@ h1 {
 }
 
 h1>small {
-    font-size: 40px;
+    font-size: 20px;
 }
 
 h2 {
-    font-size: 30px;
+    font-size: 15px;
+    margin-top: 25px;
 }
 
 p {
-    line-height: 35px;
+    line-height: 30px;
 }
 
 ul {
@@ -86,6 +65,7 @@ ul {
 
 li {
     margin: 0 0 10px 0;
+    line-height: 30px;
 }
 
 u {
@@ -163,3 +143,25 @@ nav a:first-child {
 nav a:last-child {
     border-bottom: solid #cfcfcf 2px;
 }
+
+nav a:hover {}
+
+hvr {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    overflow: hidden;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: color, background-color;
+    transition-property: color, background-color;
+}
+
+.hvr:hover, .hvr:focus, .hvr:active {
+    background-color: #990000;
+    color: white;
+}
+
+2
