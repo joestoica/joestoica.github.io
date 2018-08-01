@@ -7,6 +7,10 @@ body {
 
 article {
     padding: 0 0 0 0;
+    display: block;
+    border-bottom-color: #cfcfcf;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
 }
 
 footer {
@@ -16,9 +20,8 @@ footer {
     text-align: center;
 }
 
-.main {
+main {
     position: static;
-    /*border-left: solid 1px grey;*/
     padding: 0 3% 0 3%;
     margin: 0 25% 0 0;
 }
@@ -47,12 +50,21 @@ h1 {
 }
 
 h1>small {
+<<<<<<< HEAD
     font-size: 20px;
+=======
+    font-size: 45px;
+>>>>>>> e18a512c9c4f3c98055a67d10830f21f8d5c7e3a
 }
 
 h2 {
     font-size: 15px;
     margin-top: 25px;
+}
+
+h3 {
+  margin: 0;
+  padding: 0;
 }
 
 p {
@@ -79,10 +91,8 @@ u {
 
 .links {
     list-style-type: none;
-    margin: 0;
+    margin: 25% 0 25% 0 ;
     padding: 0;
-    padding-top: 0px;
-    bottom: 5%;
 }
 
 .links li {
@@ -144,6 +154,7 @@ nav a:last-child {
     border-bottom: solid #cfcfcf 2px;
 }
 
+<<<<<<< HEAD
 nav a:hover {}
 
 hvr {
@@ -165,3 +176,13 @@ hvr {
 }
 
 2
+=======
+.tab {
+  text-indent: 50px;
+}
+code{
+  display: inline-block;
+  border: solid 2px #cfcfcf;
+
+}
+>>>>>>> e18a512c9c4f3c98055a67d10830f21f8d5c7e3a
