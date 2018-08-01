@@ -172,8 +172,24 @@ nav a:last-child {
 .tab {
   text-indent: 50px;
 }
+
 code{
   display: inline-block;
   border: solid 2px #cfcfcf;
+
+}
+
+.square {
+    width: 75px;
+    height: 75px;
+    display: inline-block;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 15px;
+
+}
+
+
+.stuff{
 
 }
