@@ -1,7 +1,7 @@
 body {
-    background-color: #ffff;
+    background-color: #edebeb;
     font-family: Helvetica;
-    color: #2d2d2d;
+    color: #2A2A2E;
     font-size: 15px;
 }
 
@@ -33,7 +33,7 @@ main {
     top: 0;
     right: 0;
     overflow-y: hidden;
-    background-color: #2d2d2d;
+    background-color: #2A2A2E;
     text-align: center;
 }
 
@@ -50,11 +50,7 @@ h1 {
 }
 
 h1>small {
-<<<<<<< HEAD
     font-size: 20px;
-=======
-    font-size: 45px;
->>>>>>> e18a512c9c4f3c98055a67d10830f21f8d5c7e3a
 }
 
 h2 {
@@ -63,8 +59,8 @@ h2 {
 }
 
 h3 {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 p {
@@ -85,13 +81,18 @@ u {
     border-bottom: 1px solid grey;
 }
 
+a {
+    text-decoration: none;
+    color: #008fd5;
+}
+
 ​ strong {
     font-size: 20px;
 }
 
 .links {
     list-style-type: none;
-    margin: 25% 0 25% 0 ;
+    margin: 25% 0 25% 0;
     padding: 0;
 }
 
@@ -137,7 +138,7 @@ nav {
 
 nav a {
     text-decoration: none;
-    color: white;
+    color: #edebeb;
     display: block;
     padding: 15px 0 15px 0;
     border-top: solid #cfcfcf 1px;
@@ -154,7 +155,6 @@ nav a:last-child {
     border-bottom: solid #cfcfcf 2px;
 }
 
-<<<<<<< HEAD
 nav a:hover {}
 
 hvr {
@@ -174,15 +174,3 @@ hvr {
     background-color: #990000;
     color: white;
 }
-
-2
-=======
-.tab {
-  text-indent: 50px;
-}
-code{
-  display: inline-block;
-  border: solid 2px #cfcfcf;
-
-}
->>>>>>> e18a512c9c4f3c98055a67d10830f21f8d5c7e3a
