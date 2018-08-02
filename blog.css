@@ -2,7 +2,7 @@ body {
     background-color: #edebeb;
     font-family: Helvetica;
     color: #2A2A2E;
-    font-size: 15px;
+    font-size: 17px;
 }
 
 article {
@@ -54,7 +54,7 @@ h1>small {
 }
 
 h2 {
-    font-size: 15px;
+    font-size: 20px;
     margin-top: 25px;
 }
 
