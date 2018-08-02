@@ -54,13 +54,21 @@ h1>small {
 }
 
 h2 {
-    font-size: 20px;
+    font-size: 40px;
     margin-top: 25px;
+    padding-top: 25px;
+    border-top: 1px solid grey;
 }
 
 h3 {
-    margin: 0;
+    font-size: 20px;
+    margin-top: 0;
     padding: 0;
+}
+
+h3>u {
+    text-decoration: none;
+    border-bottom: 1px solid grey;
 }
 
 p {
@@ -76,11 +84,6 @@ li {
     line-height: 30px;
 }
 
-u {
-    text-decoration: none;
-    border-bottom: 1px solid grey;
-}
-
 a {
     text-decoration: none;
     color: #008fd5;
@@ -90,7 +93,12 @@ a {
     font-size: 20px;
 }
 
-.links {
+u {
+    text-decoration: none;
+    border-bottom: 3px solid #2A2A2E;
+}
+
+​ .links {
     list-style-type: none;
     margin: 25% 0 25% 0;
     padding: 0;
