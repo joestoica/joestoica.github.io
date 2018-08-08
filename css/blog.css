@@ -99,13 +99,14 @@ u {
 }
 
 ​ .links {
-    list-style-type: none;
-    margin: 25% 0 25% 0;
-    padding: 0;
+    cursor: default;
+    list-style: none;
+    padding-left: 0;
 }
 
 .links li {
-    display: inline;
+    display: inline-block;
+    padding: 0 1em 0 0;
 }
 
 /* font awesome icons */
@@ -178,6 +179,28 @@ hvr {
 }
 
 .hvr:hover, .hvr:focus, .hvr:active {
-    background-color: #990000;
+    background-color: #008fd5;
     color: white;
+}
+
+figcaption {
+    font-size: 8px;
+}
+
+code {
+    display: inline-block;
+    background-color: #e1e0e0;
+    font-family: monospace;
+    margin: 1% 0 1% 0;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+pre {
+    white-space: pre-wrap;
+}
+
+.date {
+    right: -15%;
+    position: relative;
 }
