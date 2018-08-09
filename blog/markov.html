@@ -6,11 +6,11 @@
 <head>
 	<meta charset="utf-8">
 	<title>
-		Markov Chain Tweet Maker
+		Markov Chain Tweet Generator
 	</title>
 	<link rel="stylesheet" type="text/css" href="../css/blog.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link href="../images/favicon.ico" rel="icon" type="image/x-icon" />
+
 </head>
 
 <!-- Body -->
@@ -42,20 +42,20 @@
 	</aside>
 
 	<main>
-		<h1><small> Using 1.6 Million Tweets with a </small> <br>Markov Text Generator <small><span class="date">Aug 08, 2018</span></small></h1>
+		<h1><small> Using 1.6 Million Tweets with a </small> <br>Markov Chain Text Generator <small><span class="date>Aug 08, 2018"</span></small></h1>
 
 		<p>
-			During my daily dose of reddit browsing, I came across <a href="https://www.reddit.com/r/SubredditSimulator/comments/91pjrh/the_view_from_my_offices_toilet_today/">this post</a> and was subsequently pretty confused. <i>How can an office be THAT high?</i> Amidst my bewilderment, I noticed that it came from the subreddit <a href="https://www.reddit.com/r/SubredditSimulator/">SubredditSimulator</a>, and its hilarity immediately grabbed my attention. If you don't know how Reddit works, it is basically a giant forum split into thousands of subcommunities called "subreddits." Users are allowed to subscribe to whatever subreddits they want to, create posts in any subreddit, and comment on any post they like.
+			During my daily dose of reddit browsing, I came across <a href="https://www.reddit.com/r/SubredditSimulator/comments/91pjrh/the_view_from_my_offices_toilet_today/">this post</a> and was subsequently pretty confused. <i>How can an office be THAT high?</i> Amidst my bewilderment, I noticed that it came from the subreddit <a href="https://www.reddit.com/r/SubredditSimulator/">SubredditSimulator</a>, and its hilarity immediately grabbed my attention. If you are unfamiliar with how Reddit operates, it is basically a giant forum split into thousands of subcommunities called "subreddits." Users are allowed to subscribe to whatever subreddits they want to so they can regularly view its content, create posts in any subreddit, and comment on any post they like.
 		</p>
 
 		<p>
-			But /r/SubredditSimulator is a little different. Regular users can't make their own posts or make comments on threads either. Instead, the users that generate content for that subreddit are actually all bots who use <a href="https://en.wikipedia.org/wiki/Markov_chain#Markov_text_generators">Markov Chain text generation</a>, hence the gibberish you see littering the subreddit.
+			But /r/SubredditSimulator is a little different. Regular users can't make their own posts or comments, however they still play a role in the voting system for content. The users that generate the actual content  are all bots who use <a href="https://en.wikipedia.org/wiki/Markov_chain#Markov_text_generators">Markov Chain text generation</a> to create their content, hence the seemingly nonsensical titles and comments. The bots are all modeled after a certain subreddit, and it's text data comes solely from their home. For example, /u/Jokes_SS is meant to mimic posts and comments found on /r/jokes.
 		</p>
 
 		<h2><u id="markov">But what is a Markov Chain?</u></h2>
 
 		<p>
-			Basically, a Markov Chain is a way to model a memoryless (future events and their outcomes are not affected by prior outcomes), stochastic (randomly determined) process, and this photo from the Wikipedia page above  illustrates this idea perfectly:
+			Basically, a Markov Chain is a way to model a stochastic process of one state transitioning to its next state. It is important to note that future outcomes only depend on the current state of the model, and not past events (this is the memoryless property). Wikipedia uses this image to  illustrate this idea:
 		</p>
 
 		<div style="text-align: center">
@@ -64,10 +64,10 @@
 		</div>
 		<p>
 
-			The two nodes on this graph (sunny or rainy) represent two states that the model can be in, while the edges and their respective numbers represent the probabilty of the transition from one state to the next (in this case the probability of the forecast on the following day). So in this example,  if the current state is Sunny, then there is 90% chance it will be sunny on the next day, while there is a 10% chance the next day will be rainy.</p>
+			The two nodes on this graph (sunny or rainy) represent two states that the model can be in, while the edges and their respective numbers represent the probabilty of the transition from one state to the next (in this case the probability of the forecast on the following day). Let's say today is Sunny. There is a 90% chance it will be sunny on the tomorrow, while there is a 10% chance  tomorrow will be rainy. It doesn't matter if yesterday was sunny or rainy, because today it's sunny, and that's all that matters when considering tomorrow's weather.</p>
 
 			<p>
-				This same concept can be applied to text generation which means we better get some data:
+				This same process can be applied to text generation processes. Let's make some data!
 				<br>
 				<code>
 					1. "I pet the dog."<br>
@@ -76,50 +76,60 @@
 					4. "I pet the pet cat."<br>
 				</code><br>
 
-				Great! now let's build a sentence. We will start with the letter "I" because all of our sentences do.
+
+				Great! now let's build a sentence. We will start with the letter "I" for simplicity purposes.
 				<br><code>I</code><br>
 
-				If we fed this into a Markov Chain function, it would build a data structure that has a key word, and it's values would be the words and their probabilities that directly follow that key in the given data. Using the weather example still, the current word we are using in our sentence would be equivalent to today's weathe, and the next word would be tomorrow's weather. So since we started with "I", the words that follow it in our data are "pet", "have", "went", and "pet" again. The data might have this sort of hash-esque structure (note that this isn't all of the data):
+				If we fed this into a Markov Chain function, it would build a data structure that has a key word (in this case it is "I"), and it's values would be all of the words that followed the word "I" in our given data. <br>
+				<code>
+					1. "I <mark>pet</mark> the dog."<br>
+					2. "I <mark>have</mark> a pet dog."<br>
+					3. "I <mark>went</mark> to the pet store."<br>
+					4. "I <mark>pet</mark> the pet cat."<br>
+				</code><br>Once all of the words are found, the function calculates a proportion of how often the second word follows the first word. Using the weather example still, the current word we are using in our sentence would be equivalent to today's weather, and the next word would be tomorrow's weather. So since we started with "I", the words that follow it in our data are "pet", "have", "went", and "pet" again. The data might have this sort of map-esque structure (note that this is just the "I" data):
 				<br><code>{"I": {"pet":0.5, "went":0.25, "have":0.25}, ...}</code><br>
-				So we have the word we are currently on in the front, and then each following word with its probabilities. The function would then randomly choose a word, and then add it to the sentence. Let's say it chose "pet", so it's added to the sentence.
+				So we have the word we are currently using at the front, and then each successive word and its probabilities. The function would then randomly choose a word using these probabilities, and then add it to the sentence. Let's say it chose "pet", so it's added after "I."
 				<br><code>I pet</code><br>
 
 				It  then creates the transition map for "pet":
 				<br><code>{"pet":{"the":0.4, "dog.":0.2, "store.":0.2, "cat.":0.2}}</code><br>
 				and randomly selects a work and adds to our sentence:
-				<br><code>I pet dog.</code><br>
-				It isn't grammatically correct, but it works! Now that we understand how it works, let's open up R and implement it there.
+				<br><code>I pet store.</code><br>
+				It doesn't really make sense, but that's how the process works! Now that we understand the basics of Markov Chains, let's open up R and implement it there.
 			</p>
 
 			<h2><u id="R">R Implementation</u></h2>
 			<p>
-				We will make use of the <a href="https://cran.r-project.org/web/packages/ngram/ngram.pdf">ngram</a> R package because it has a Markov Chain function called babble that we will make use of. Our data comes from <a href="https://www.kaggle.com/kazanova/sentiment140">this Kaggle dataset</a>, which contains 1.6 million tweets, an awesome amount to use for Markov chains. Small datasets are not ideal for generators simply because there will not be multiple associations to randomly choose from, and sentences will look very similar to the original ones fed into function.
+				We will make use of the <a href="https://cran.r-project.org/web/packages/ngram/ngram.pdf">ngram</a> R package because it has a Markov Chain function named babble() that we will make use of. Our data comes from <a href="https://www.kaggle.com/kazanova/sentiment140">this Kaggle dataset</a>, which contains 1.6 million tweets, which is great for large amounts of word pair associations to create, however there is a trade-off in how long it will take for our script to run. Small datasets are not ideal for generators simply because there will not be as many word pairs to randomly choose from, and sentences will look very similar to the original ones fed into the function. Here is a script I wrote to return a tweet using this data.
+
 			</p>
 
-				<pre class ="r">
+				<pre>
 					<code>library(tidyverse)
 library(ngram)
 library(stringi)
 
-tweets &lt;- read_csv("training.1600000.processed.noemoticon.csv", col_names = FALSE)
-names(tweets) &lt;- c("target", "ids", "date", "flag", "user", "text")
+tweets &lt;- read_csv("training.1600000.processed.noemoticon.csv", col_names =
+	c("target", "ids", "date", "flag", "user", "text"))
 
-# Encode weird byte issues so it actually runs
+# Encode weird byte issues so it concatenate actually runs
 tweets$text &lt;- stri_enc_toutf8(tweets$text, is_unknown_8bit = TRUE, validate = TRUE)
 
-# Eliminate tweets longer than the max character limit, there is only one that is also encoded strangely
+# Eliminate tweets longer than the max character limit
 tweets &lt;- tweets %>%
   filter(nchar(text) &lt;= 280)
 
-# Turn the column containing all of the tweets into one string, so it is able to be fed into the babble function. This takes a while to run. This took my 2015 Macbook Pro  51.25 seconds to run, but your mileage may vary
+# Turn the column containing all of the tweets into one string to be fed into the babble function
+# This takes a while to run due to the size of the data, and took my 2015 Macbook Pro  51.25 seconds to run, but your mileage may vary
 str <- concatenate(tweets$text)<br>
 
 # Create the ngram obejct to be passed into the babble function
 ng <- ngram(str)<br>
 
-# This function takes an ngram object and an integer that specifies number of words to return. The trim argument will trim off excessive words after the last punctuation point, and makes the tweet a little more understandable.<br>
-# Input: ngram object, integer, boolean <br>
-# Output: String <br>
+# This function takes an ngram object and an integer that specifies number of words to return. The trim argument will trim off excessive words after the last punctuation point, and makes the tweet a little more understandable.
+
+# Input: ngram object, integer, boolean
+# Output: String
 
 make_tweet &lt;- function(ngram = ng, num = 35, trim = TRUE){
   stopifnot(num &lt;= 35)
@@ -127,20 +137,17 @@ make_tweet &lt;- function(ngram = ng, num = 35, trim = TRUE){
   # Generate Tweet
   str &lt;- babble(ngram, genlen = num)
 
-  # remove mentions, hastags, and links
-  str &lt;- gsub(x = str, pattern = "@\\w+ *", "")
-  str &lt;- gsub(x = str, pattern = "#\\w+ *", "")
-  str &lt;- gsub(x = str, pattern = "https\\w+ *", "")
-  str &lt;- gsub(x = str, pattern = "http\\w+ *", "")
-  str &lt;- gsub(x = str, pattern = "Http\\w+ *", "")
-  str &lt;- gsub(x = str, pattern = "HTTP\\w+ *", "")
-  str &lt;- gsub(x = str, pattern = "www.\\w+ *", "")
-  str &lt;- gsub(x = str, pattern = "://t.co/\\w+ *", "")
-  str &lt;- gsub(x = str, pattern = "://bit.ly/\\w+ *", "")
+  # remove mentions, hastags, links, and fix quote and ampersand encoding issue
+  search_patterns <- c("@\\w+ *", "#\\w+ *", "https\\w+ *", "http\\w+ *",
+  "Http\\w+ *", "HTTP\\w+ *", "www.\\w+ *","://t.co/\\w+)", "://bit.ly/\\w+ *",
+  "&quot;", "&amp")
 
-  # fixing ampersands and quotes
-  str &lt;- gsub(x = str, pattern = "&amp", "and")
-  str &lt;- gsub(x = str, pattern = '&quot;', "")
+  replace_patterns <- c(rep("", length(search_patterns) - 1), "and")
+
+    # This website helped me with mapply
+    # http://www.howtobuildsoftware.com/index.php/how-do/yUL/r-for-loop-gsub-sapply-trying-to-avoid-for-loop-with-sapply-for-gsub
+
+  mapply(function(u, v) str<<-gsub(u, v, str), search_patterns, replace_patterns)
 
   # Cut off sentence fragments at end.
   if (trim == TRUE) {
@@ -154,7 +161,7 @@ make_tweet &lt;- function(ngram = ng, num = 35, trim = TRUE){
   if (nchar(str) > 280 || nchar(str) &lt;= 5 || nchar(str) == 0) {
     # Reset str so it doesn't print
     str = ""
-    make_tweet(ngr, num)
+    make_tweet(ngram, num)
   }
 
   # Print it!
@@ -173,8 +180,9 @@ make_tweet()</code></pre>
 
 	<br><code>Iz was fussing all night xxx i'm just so i told my exam now. crap. i forgot about bones even though it's night at ours... kids, popcorn, cosy slippers, life is short...</code><br>
 </p>
-
-<p>Everything looks like it is working properly, which is nice. I hope you enjoyed this post, feel free to contact me via Twitter or email if you have any questions or feedback. I would love to see other ideas or fun data sets to use with this code.</p>
+<h2><u>It's as simple as that!</u></h2>
+<p>Everything looks like it is working properly, which is always nice. I hope you enjoyed this post, feel free to contact me via Twitter or email if you have any questions or feedback. I would love to see other ideas or fun data sets to use with this code.
+<br> <br>*Disclaimer: The content and ideas expressed in the tweets are not my own.</p>
 </main>
 
 </body>

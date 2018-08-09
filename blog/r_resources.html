@@ -100,7 +100,7 @@
 						You can format most aspects of the knit document. Font size, headers, tables, lists, images, and many more aspects are controlled by what you want to show. If you want to hide all of your code, and just show the output, you can do that!
 					</li>
 				</ul>
-				Even if you're not using R Markdown for its report generating benefits, R Markdown is great for just having a solid workflow as you work your way through a project.
+
 			</p>
 
 			<h3><u>The R Online Community</u></h3>
@@ -139,28 +139,28 @@
 			<h4>dput()</h4>
 			<p>
 				When it comes to output in R, it can sometimes be very cumbersome to work with. For example, let's use the built in iris datset. Say I want to refactor the species column in the dataframe in a certain order. I could use<br>
-				<code>iris$species <- factor(iris$species, levels = c("setosa", "versicolor", "virginica"))</code>. <br> or any other combination of the three. If I wanted to be quick, I could copy and paste some output and add some commas to get by. For example, calling <br><br>
+				<code>iris$species <- factor(iris$species, levels = c("setosa", "versicolor", "virginica"))</code> <br> or any other combination of the three. If I wanted to be quick, I could copy and paste some output and add some commas to get by. For example, calling <br>
 				<code>
 					> levels(iris$Species) <br>
 					[1] "setosa"     "versicolor" "virginica"
 				</code>
-				<br><br>
+				<br>
 				will work, but you definitely have some extra work to do!
 				This wouldn't take a lot of time to type out by hand, but imagine that your dataframe had a lot of different levels. It would be really annoying and slow to type out, right? The function dput() is here to save the day! It  will take in a dataframe column, and returns the levels of the column separated by a comma, and inserts inside of the c() call. Beautiful!
 			</p>
 
 			<p>
-				Here's what it will look like: <br><br>
+				Here's what it will look like: <br>
 				<code>
 					> dput(levels(iris$Species))<br>
 					c("setosa", "versicolor", "virginica")
 				</code>
-				<br><br>
-				Now, say I wanted it in reverse alphabetical order. It's as simple as <br><br>
+				<br>
+				Now, say I wanted it in reverse alphabetical order. It's as simple as <br>
 				<code>
 					> dput(sort(levels(iris$Species), decreasing = TRUE)) <br>
 					c("virginica", "versicolor", "setosa")
-				</code><br><br>
+				</code><br>
 				So, now it is super easy to use for c() calls!
 			</p>
 
