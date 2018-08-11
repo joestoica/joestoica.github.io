@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Head  -->
+
+<head>
+	<meta charset="utf-8">
+	<title>
+		2016 Presidential Election Map
+	</title>
+	<link rel="stylesheet" type="text/css" href="../css/blog.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<!-- Body -->
+
+<body>
+
+	<!-- Aside -->
+	<aside class="left_bar">
+		<div style="text-align: center">
+			<img src="../images/me.jpg" width="100%" />
+		</div>
+
+		<!-- Nav -->
+
+		<nav id="nav">
+			<a href="../index.html"><span>Homepage</span></a>
+		</nav>
+
+
+		<!--  Links -->
+		<ul class="links">
+			<li><a href="https://twitter.com/Joe_Stoica" class="fa fa-twitter"></a></li>
+			<li><a href="https://www.linkedin.com/in/joe-stoica/" class="fa fa-linkedin"></a></li>
+			<li><a href="https://github.com/joestoica" class="fa fa-github"></a></li>
+			<li><a href="mailto:joe.stoica@gmail.com" class="fa fa-envelope"></a></li>
+		</ul>
+	</aside>
+
+	<main>
+		<h1><small>A Leaflet map of the </small><br>2016 U.S. Election</h1>
+	  <p>
+	  <p>The United States 2016 presidential election seemed like it would
+		be an <a href="http://www.pewresearch.org/fact-tank/2016/11/09/why-2016-election-polls-missed-their-mark/">
+		easy victory for the DNC's Hillary Clinton over the GOP's Donald Trump.</a>            However, Trump came out the victor, depsite <a href="https://en.wikipedia.org/wiki/United_States_presidential_election,_2016">
+		losing the popular vote by three million votes.</a> This election
+		has inspired me to dig deeper into the voting data and explore various
+		relationships through almost every county across the nation. Through
+		this investigation, I also wanted to become more familiar with choropleth
+		maps in R, and turn them interactive using the leaflet
+		package. If you would like to see the code used to make this, click
+		<a href="https://github.com/joestoica/2016-Presidential-Election-Analysis/blob/master/election_analysis.Rmd"> here.
+		  </a>
+	  </p>
+
+
+	  <p>
+		<h2><u>Examination Through Mapping </u></h2>
+	  <p>
+	  <iframe seamless src="./map.html" width="100%" height="500"></iframe>
+
+	  <p>
+		There are a few different ways to explore the map. Clicking on an individual
+		county reveals relevant election data about that specific county,
+		such as the county name, the winning candidate, the number of votes
+		each candidate received, and the voting margin between the two. The
+		radio buttons in the bottom left allow the map to be shaded in four
+		different ways: by county winner,  by diverging vote percent margin, by Trump's overall margin, and by Clinton's overall margin. The darker the shade of the county, the larger the percent margin is for that candidate. Clinton is mapped to blue counties, and Trump is mapped to red.
+	  </p>
+
+	  <p>
+		<h2><u>Creation of the Map</u></h2>
+	  <p>
+
+	  <p>
+		Making this map was actually quite a challenge for me. As it turns out, I ended
+		up using three different datasets combined into one larger dataset.
+		One dataset had general party election information by county, another
+		had candidate data by county, and the final was a shapefile to use
+		during the actual creation of the map. The major downfall of this
+		data is that some counties were excluded, so if the candidate data
+		set was missing one county, it had to be removed from the other
+		two datasets. This is why Washington D.C. and the entire state of Alaska
+		were removed from the final map.
+	  </p>
+
+	  <p>
+		Once the data was compiled it was smooth sailing. All I had to complete was
+		the palettes, popup, and the map itself. It's worth mentioning that
+		the diverging color palette used in the second map had to be crafted
+		carefully, due to the fact that the color scales darker with larger
+		winning margins. In order to represent the margins accurately, the
+		palettes must scale equally in both directions since the two candidates'
+		maximum votes are different sizes.
+	  </p>
+	</article>
+
+	</main>
+
+</body>
+
+</html>
