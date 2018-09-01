@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+#main {
+    display: flex;
+    min-height: calc(100vh - 40vh);
+}
+
+#main>article {
+    flex: 1;
+}
+
+#main>nav, #main>aside {
+    flex: 0 0 20vw;
+    background: grey;
+}
+
+#main>nav {
+    order: -1;
+}
+
+header, footer, article, nav, aside {
+    padding: 1em;
+}
+
+header, footer {
+    background: #6093ca;
+    height: 20vh;
+}
+
+.name {
+    height: 200px;
+    width: 200px;
+}
+
+.navi {
+    height: 200px;
+    width: 200px;
+}
