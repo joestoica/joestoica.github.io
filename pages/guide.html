@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Joe Stoica</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../css/theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  </head>
+  <body>
+
+    
+    <!-- Header -->
+    <div class="header">
+      <div>
+	<h1>Beginners Guide to Getting Started in R</h1>
+      </div>
+    </div>
+
+
+    <div class="col space">
+      <div class="title">
+    	<h1>So, you want to Learn R?</h1>
+	<p>
+	  I want to start this post with a disclaimer:
+	  <strong>I DO NOT CLAIM TO BE AN R EXPERT!</strong> I'm just a student who wants to provide resources I wish I had when I started my R journey almost a year ago. If I had known about some of these things I know it would have made my life so much easier. And so, this is my humble attempt to compile those resources in one place for anyone to use as a reference!
+	</p>
+
+	<p>
+	  This page is going to be broken up into a few sections. The first section will be for people with little to no programming experience and places to learn the basics, and after that I'll have some more advanced resources. Finally I'll just have a random section that contains tips and tricks and other useful things.
+	</p>
+
+	<h3>But first, a quick pep talk</h3>
+	<p>
+	  Programming is extremely frustrating, and learning programming is really hard. Programming causes you to fail, over, and over, and over. I guarantee you that you will soon spend an absurd amount of time trying to figure just why your code is not working, only to discover you forgot one simple step somewhere along the way. That being said, some of the greatest satisfaction in my life has come from overcoming these hardships and ending up with a product that I've created and that I am <i>extremely</i> proud of.
+	</p>
+	<p>
+	  Don't give up on your pursuits. If you can't figure something out, take a break from it, and I guarantee nine out of ten times you'll figure out what you're doing wrong. However, for that one time where you just can't figure it out, you might have to put your pride away and seek help. Google it. Read the documentation. Create a post for your problem on Stack Overflow. There is nothing wrong with doing this, because you're still learning. I bet you that you will look up how to use gather() everytime you use it, and there's nothing wrong with that. <strong> You and everyone else who uses R is still learning R.</strong> Just keep practicing and never think you aren't good enough to solve a problem, cause I bet you that you are better than you think you are.
+	</p>
+
+	<article id="beginner">
+	  <h2>For R Beginners</h2>
+
+	  <h3>Downloading R and RStudio</h3>
+	  <p>
+	    To start using R, download it <a href="https://cran.r-project.org/bin/windows/base/">here.</a> It's free! Once you've completed installation, I cannot emphasize enough how amazing <a href="https://www.rstudio.com/">RStudio</a> is. It is a free (with options to have a paid version, but it is pretty unecessary), open-source integrated development environment (IDE for short) that makes using R so much easier. RStudio is not required, but it will spice up your life in more ways than you could ever imagine. Now that you have RStudio installed, your actual journey can begin. <a href="../images/rstudio-ide.pdf">Here</a> is a cheatsheet to familiarize yourself with the IDE if you're completely overwhelmed, or <a href="https://www.youtube.com/watch?v=lVKMsaWju8w">here</a> is a video that can explain what you see!
+	  </p>
+	  <h2>Learning Resources</u></h2>
+<h3>Swirl</u></h3>
+<p>
+  <a href="https://swirlstats.com">Swirl</a> is an interactive
+  tutorial that you run inside of your console in RStudio. It has lessons varying from the basics, to regressions, to exploratory data analysis. It is a great (once again, FREE!) resource that can
+  definitely get you up to speed.
+</p>
+
+<h3>DataCamp</u></h3>
+<p>
+  <a href="https://www.datacamp.com/courses/free-introduction-to-r">DataCamp</a> is an alternative to Swirl that runs in browser and takes a signicantly shorter amount of time to complete in its entirety. This is also free, but in my opinion lacks the depth that Swirl offers. You can always try both and see what you like better!
+</p>
+
+<h3>R for Data Science</u></h3>
+<p>
+  This might not be for complete beginners, but once you familiarize yourself with R, <a href="http://r4ds.had.co.nz/">this book</a> is absolutely my favorite resource for R. And you guessed it, it's FREE (however physical copies are available if you want to show your support to the authors)! It is written by Hadley Wickham and Garrett Grolemund, who are probably some of the most knowledgeable people about all things R. If you read this book your understanding of R will grow exponentially. It teaches you the foundations of transforming and tidying data so that it is easier to work with for modeling and visualization. This book also helps you teaches you the basics of creating statistical models for your own analyses!
+</p>
+
+<h3>R Markdown</u></h3>
+<p>
+  I just wanted to mention R Markdown and it's amazing functionality. <a href="http://r4ds.had.co.nz/r-markdown.html">Here</a> is a chapter showcasing what R Markdown is and it's benefits. But, here is a quick summary that should convince you:
+  <ul>
+    <li>You can combine your code and its output and written observations in one document, which is super nice for work flow! </li>
+    <li>
+      You can take everything you wrote in this document, and knit it together to make a complete report. It typesets everything, and within seconds have a professional document in pdf, html, or other filetypes.
+    </li>
+    <li>
+      You can format most aspects of the knit document. Font size, headers, tables, lists, images, and many more aspects are controlled by what you want to show. If you want to hide all of your code, and just show the output, you can do that!
+    </li>
+  </ul>
+
+</p>
+
+<h3>The R Online Community</u></h3>
+<p>
+  This isn't so much a single resouce, but the R Online Community is <i>insanely</i> awesome. If you're looking to connect with other R enthusiasts, the <a href="https://twitter.com/R4DScommunity">R for Data Science Online Learning Community</a> is full of awesome tweets about R and data science. They also have a weekly data science project for you to work on! They have a <a href="https://github.com/rfordatascience/tidytuesday">GitHub repository</a> that contains all of the datasets they use for that weeks project. So you just have to donwload the data and basically do whatever you want with the data.
+</p>
+<p>
+  Once you finish your rendition of the project, you can submit it to twitter and get feedback on your work. I have seen some awesome data vizualizations retweeted on this page, and has taught me how to do certain tidying/visualizing concepts that I have been able to apply to my own projects. There is also a
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSeT3zfzjWxoaQ6RmUEdT9n0xtvkuSaMeBetDQLpzNJvGUB6IQ/viewform">slack group</a> where they have various channels where you can talk about all things R with extremely awesome and supportive people.
+</p>
+</article>
+
+<article id="adv">
+  <h2>For Intermediate Programmers</u></h2>
+<h3>Advanced R by Hadley Wickham</u></h3>
+<p>
+  <a href="https://adv-r.hadley.nz/">Advanced R</a> takes your skills to the next level. This isn't really a "how-to" book so much as it is a book to deepen your understanding of R and using it to its full capabilities. I haven't read this book cover to cover, but from what I have read it is <strong>excellent.</strong>
+</p>
+
+<h3>Happy Git and GitHub for the useR</u></h3>
+<p>
+  <a href="http://happygitwithr.com/">This resource</a> will teach you everything you need to know about GitHub and how it operates. If you don't know what GitHub is, it is essentially a place for you to store your work in repositories, which allows for easy version control as well as facilitating in collaborating with others in a team setting.
+</p>
+</article>
+
+<article id="tips">
+  <h2>Tips and Tricks!</u></h2>
+<h3>Cheatsheets I use Often</u></h3>
+<p>Some of these are available in RStudio, if you go to help > cheatsheets!</p>
+<ul>
+  <li><a href="../images/ggplot.pdf">ggplot cheatsheet</a></li>
+  <li><a href="../images/rmd.pdf">R Markdown cheatsheet</a></li>
+  <li><a href="../images/dplyr.pdf">dplyr cheatsheet</a></li>
+</ul>
+<h3>Functions to Make Life Easy</u></h3>
+<h4>dput()</h4>
+<p>
+  When it comes to output in R, it can sometimes be very cumbersome to work with. For example, let's use the built in iris datset. Say I want to refactor the species column in the dataframe in a certain order. I could use<br>
+  <code>iris$species <- factor(iris$species, levels = c("setosa", "versicolor", "virginica"))</code> <br> or any other combination of the three. If I wanted to be quick, I could copy and paste some output and add some commas to get by. For example, calling <br>
+			<code>
+			  > levels(iris$Species) <br>
+      [1] "setosa"     "versicolor" "virginica"
+  </code>
+  <br>
+  will work, but you definitely have some extra work to do!
+  This wouldn't take a lot of time to type out by hand, but imagine that your dataframe had a lot of different levels. It would be really annoying and slow to type out, right? The function dput() is here to save the day! It  will take in a dataframe column, and returns the levels of the column separated by a comma, and inserts inside of the c() call. Beautiful!
+</p>
+
+<p>
+  Here's what it will look like: <br>
+  <code>
+    > dput(levels(iris$Species))<br>
+    c("setosa", "versicolor", "virginica")
+  </code>
+  <br>
+  Now, say I wanted it in reverse alphabetical order. It's as simple as <br>
+  <code>
+    > dput(sort(levels(iris$Species), decreasing = TRUE)) <br>
+    c("virginica", "versicolor", "setosa")
+  </code><br>
+  So, now it is super easy to use for c() calls!
+</p>
+
+<h3>Other resources</h3>
+<p>
+  <a href="https://paulvanderlaken.com/2017/08/10/r-resources-cheatsheets-tutorials-books/">The resource guide to end all resource guides.</a> Seriously. This page probably has everything you'll ever need and then some.
+</p>
+</div>
+</div>
+
+<div class="footer">
+  <div>  
+    <a href="../index.html" target="blank"><i class="fa fa-home fa-3x"></i></a>
+  </div>
+  <div>
+    <a href="https://www.linkedin.com/in/joe-stoica/" target="blank"><i class="fa fa-linkedin fa-3x"></i></a>
+  </div>
+  <div>
+    <a href="https://twitter.com/Joe_Stoica" target="blank"><i class="fa fa-twitter fa-3x"></i></a>
+  </div>
+  <div>
+    <a href="https://github.com/joestoica" target="blank"><i class="fa fa-github fa-3x"></i></a>
+  </div>
+  <div>
+    <a href="mailto:joe.stoica@gmail.com" target="blank"><i class="fa fa-envelope fa-3x"></i></a>
+  </div>
+</div>
+
+</body>
+</html>
