@@ -27,7 +27,6 @@ body {
     margin: 1em 10px 10px 10px;
     line-height: 75px;
     font-size: 30px;
-    align-items: center;
 }
 
 .header_item > h1  {
@@ -118,10 +117,14 @@ body {
     padding: 20px;
     display: flex;
     flex-direction: row;
+    margin: 0 10px 0 10px;
+    padding: 0 10px 0 10px;
 }
 
 .work_item {
     width: 50%;
+    padding: 0 10px 0 10px;
+    margin: 0 10px 0 10px;
 }
 
 li {
@@ -133,7 +136,7 @@ a {
     color: #3F7BBF;
 }
 /* Main column */
-.main {
+.min {
     flex: 70%;
     background-color: white;
     padding: 20px;
@@ -168,20 +171,27 @@ code {
     padding: 0px 2px;
 }
 
-/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+/* For mobile */
 @media screen and (max-width: 700px) {
     .row, .header{   
         flex-direction: column;
-    }
-    .header > div{
-	margin: 0.5em;
-	padding: 0.5em;
     }
 
     .about, .bio {
 	flex-direction: column;
     }
 
+    .row_item {
+	width: 100%;
+    }
+
+    .avatar, .avatar_item {
+	border-radius: 0;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+    }
+    
     .work {
 	flex-direction: column;
     }
@@ -191,16 +201,26 @@ code {
 	padding-bottom: 20px;
 	width: 100%;
     }
-
+    
     .work_item:first-child {
 	padding-top: 0;
     }
-
+    
     .work_item:last-child {
 	padding-bottom: 0;
     }
 
+    .header_item{
 
+    }
+    
+    .header_item > h1  {
+	font-size: 4rem;
+	font-weight: 300;
+	line-height: 1.2;
+	margin-top: 0;
+	margin-bottom: 0;
+    }
 }
 
 /* For blogs */
