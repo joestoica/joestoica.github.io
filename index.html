@@ -1,91 +1,105 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Joe Stoica</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="css/theme.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
-</head>
-<body>
+  <head>
+    <title>Joe Stoica</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
 
- 
-<!-- Header -->
-<div class="header">
-  <div>
-    <h1>Joe Stoica</h1>
-    <p>Indiana University Statistics</p>
-  </div>
-  <div>
-    <img src="images/me.jpg" width="250px"></img>
-  </div>
-</div>
-<!-- Side -->
-<div class="row">
-  <div class="about">
-    <div class="item">
-      <h2>About Me</h2>
-      <p> I am currently a senior at Indiana University pursuing a degree in Statistics, with minors in Mathematics and Biology. My passion for statistics stems from searching for objective truths hidden in the underlying story that is hidden in data and share these stories in a publicly accessible and easy to understand way.
-      </p>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+  </head>
+  
+  <body>
+   
+    <!-- Header -->
+    <div class="header">      
+      <div class="background-image" style="background-image: url(images/mountain.jpg);"></div>      
+      <div class="header_item">
+	<h1><span id="typed"></span></h1>
+      </div>      
     </div>
 
-    <div class="item">
-      <h2> My Experience </h2>
-      <ul>
-	<li>Finance and Operations intern at <a href="https://www.uplandbeer.com/">Upland Brewing Company.</a></li>
-	<li>Employee in the <a href="https://biology.indiana.edu/research/research-strengths/behavior/rosvall-lab.html">Rosvall Research Lab</a>.</li>
-	<li>Undergraduate Teaching Instructor for BIOL-L 111.</li>
-      </ul>
+    <!-- bio -->
+    <div class="bio">
+      <div>
+	<h2>About Me</h2>
+      </div>      
+      <div class="row">
+	<div class="avatar_item">
+	  <img src="images/me.jpg" width="250px;" class="avatar"></img>
+	</div>	
+	<div class="row_item">I am currently a senior at Indiana University pursuing a degree in Statistics, with minors in Mathematics and Biology. To me, Statistics is incredibly fun and deeply rewarding, and my primary interests include linear modeling techniques, data visualization, and exploratory data analysis. However, my real passion for Statistics is being able to search for objective truths that are hidden in the data I work with, and being able to report these truths in an unbiased and publicly accessible manner.
+	</div>
+      </div>    
     </div>
 
-    <div class="item">
-      <h2>My Skills</h2>
-      <ul>
-	<li><strong>R: </strong>Used for exploratory data analysis, statistical model building using various regression techniques, and statistical diagnostics and inference.</li>
-	<li><strong>Python: </strong>Currently taking the Python Bootcamp course on Udemy.com to learn the fundamental concepts of Python. My data visualization course is also in Python.</li>
-	<li><strong>SQL: </strong>Used to learn the basics of querying databases</li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-<div class="col space">
-  <div class="title">
-    <h2>My Work</h2>
-  </div>
-  <div class="work">    
-    <div class="item1">
-      <a href="pages/tidytuesday.html">Tidy Tuesday Submissions</a>
+    <!-- About -->
+    <div class="about">      
+      <div class="item">
+	<h2> My Experience </h2>
+	<ul>
+	  <li>Finance and Operations intern at <a href="https://www.uplandbeer.com/">Upland Brewing Company.</a></li>
+	  <li>Employee in the <a href="https://biology.indiana.edu/research/research-strengths/behavior/rosvall-lab.html">Rosvall Research Lab</a>.</li>
+	  <li>Undergraduate Teaching Instructor for BIOL-L 111.</li>
+	</ul>
+      </div>      
+      <div class="item">
+	<h2>My Skills</h2>
+	<ul>
+	  <li><strong>R: </strong>Used for exploratory data analysis, statistical model building using various regression techniques, and statistical diagnostics and inference.</li>
+	  <li><strong>Python: </strong>Currently taking the Python Bootcamp course on Udemy.com to learn the fundamental concepts of Python. My data visualization course is also in Python.</li>
+	  <li><strong>SQL: </strong>Used to learn the basics of querying databases</li>
+	</ul>
+      </div>
     </div>
     
-    <div class="item1">
-      <a href="pages/markov.html">Markov Chain Text Generation in R</a>
+    <!-- Work -->
+    <div class="bio">
+      <div><h2>My Work</h2></div>    
+      <div class="work">	
+	<div class="work_item">
+	  <a href="pages/tidytuesday.html">Tidy Tuesday Submissions</a>
+	</div>	
+	<div class="work_item">
+	  <a href="pages/markov.html">Markov Chain Text Generation in R</a>
+	</div>	
+	<div class="work_item">
+	  <a href="pages/election.html">2016 Presidential Election Leaflet Map</a>
+	</div>	
+	<div class="work_item">
+	  <a href="pages/guide.html">Beginner's Guide to Getting Started in R</a>
+	</div>
+      </div>
     </div>
-    
-    <div class="item1">
-      <a href="pages/election.html">2016 Presidential Election Leaflet Map</a>
-    </div>
-    
-    <div class="item1">
-      <a href="pages/guide.html">Beginner's Guide to Getting Started in R</a>
-    </div>
-  </div>
-</div>
 
-<div class="footer">
-  <div>
-    <a href="https://www.linkedin.com/in/joe-stoica/" target="blank"><i class="fa fa-linkedin fa-3x"></i></a>
-  </div>
-  <div>
-    <a href="https://twitter.com/Joe_Stoica" target="blank"><i class="fa fa-twitter fa-3x"></i></a>
-  </div>
-  <div>
-    <a href="https://github.com/joestoica" target="blank"><i class="fa fa-github fa-3x"></i></a>
-  </div>
-  <div>
-    <a href="mailto:joe.stoica@gmail.com" target="blank"><i class="fa fa-envelope fa-3x"></i></a>
-  </div>
-</div>
+    <div class="footer">
+      <div>
+	<a href="https://www.linkedin.com/in/joe-stoica/" target="blank"><i class="fa fa-linkedin fa-3x"></i></a>
+      </div>
+      <div>
+	<a href="https://twitter.com/Joe_Stoica" target="blank"><i class="fa fa-twitter fa-3x"></i></a>
+      </div>
+      <div>
+	<a href="https://github.com/joestoica" target="blank"><i class="fa fa-github fa-3x"></i></a>
+      </div>
+      <div>
+	<a href="mailto:joe.stoica@gmail.com" target="blank"><i class="fa fa-envelope fa-3x"></i></a>
+      </div>
+    </div>
 
-</body>
+  </body>
+  <script>
+    var typed = new Typed('#typed',{
+    strings:["I am a Student",
+    "I am a Data Analyst",
+    "I am a Statistician",
+    "I am Joe Stoica"],
+    typeSpeed: 35,
+    backSpeed: 20,
+    loop: false,
+    });
+  </script>
+
 </html>

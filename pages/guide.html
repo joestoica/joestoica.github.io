@@ -11,9 +11,10 @@
 
     
     <!-- Header -->
-    <div class="header">
-      <div>
+    <div class="pages_header">
+      <div class="header_item">
 	<h1>Beginners Guide to Getting Started in R</h1>
+	<h3>(Still a Work in Progress)</h3>
       </div>
     </div>
 
@@ -111,7 +112,39 @@
   <li><a href="../images/dplyr.pdf">dplyr cheatsheet</a></li>
 </ul>
 <h3>Functions to Make Life Easy</u></h3>
-<h4>dput()</h4>
+<h4>Functions for Simulation</h4>
+<p>
+  R is really great for simulations, and there are many functions in base R that are very helpful.
+</p>
+<h5>Functions Belonging to Statistical Distributions</h4>
+<p>
+  Really useful functions that appear fairly often in basic simulations belong to the normal, uniform, and binomial distribution. Every distribution family has four key functions: Density, distribution function, quantile function and random generation for each distribution. Let's break it down.
+</p>
+<h5>Density Functions</h6>
+<p>
+  Density functions start with the "d" prefix (dnorm, dunif, dbinom). I typically use dbinom the most, because it returns the probablity of X successes in n bernoulli trials,
+  where X is a random variable. For example, if we want to calculate the probability of 5 heads in 10 coin flips, we would input
+  <code>
+    > dbinom(2, 4, 0.5)
+    0.375
+  </code>
+  which is the same as calculating this using the PDF for the binomial distribution:
+  <code>
+    > choose(4,2) * (0.5)^2 * (0.5)^2
+    0.375
+  </code>
+</p>
+<h5>Distribution Functions</h5>
+<p>
+  The "p" family uses the cumulative distribution functions (CDF) to calculate the probability that X will take a value less than or equal to x. I use this most often with pnorm(), which is used to return the p-value of a test statistic using the normal distribution. For example, if we conduct a statistical test and get a test statistic of 2.32, we would use this code:
+  <code>
+    > 1 - pnorm(2.32)
+    [1] 0.01017044
+    </code>
+</p>
+
+<h4> Other Functions</h4>
+<h5>dput()</h5>
 <p>
   When it comes to output in R, it can sometimes be very cumbersome to work with. For example, let's use the built in iris datset. Say I want to refactor the species column in the dataframe in a certain order. I could use<br>
   <code>iris$species <- factor(iris$species, levels = c("setosa", "versicolor", "virginica"))</code> <br> or any other combination of the three. If I wanted to be quick, I could copy and paste some output and add some commas to get by. For example, calling <br>
