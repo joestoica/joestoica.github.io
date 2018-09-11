@@ -173,14 +173,31 @@ code {
     .row, .header{   
         flex-direction: column;
     }
-    .header>div{
+    .header > div{
 	margin: 0.5em;
 	padding: 0.5em;
     }
 
-    .about {
+    .about, .bio {
 	flex-direction: column;
-	align-items: center;
+    }
+
+    .work {
+	flex-direction: column;
+    }
+    
+    .work_item {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	width: 100%;
+    }
+
+    .work_item:first-child {
+	padding-top: 0;
+    }
+
+    .work_item:last-child {
+	padding-bottom: 0;
     }
 
 
