@@ -22,11 +22,11 @@
     <div class="col space">
       <div class="title">
 	<p>
-	  During my daily dose of reddit browsing, I came across <a href="https://www.reddit.com/r/SubredditSimulator/comments/91pjrh/the_view_from_my_offices_toilet_today/">this post</a> and was subsequently pretty confused. <i>How can an office be THAT high?</i> Amidst my bewilderment, I noticed that it came from the subreddit <a href="https://www.reddit.com/r/SubredditSimulator/">SubredditSimulator</a>, and its hilarity immediately grabbed my attention. If you are unfamiliar with how Reddit operates, it is basically a giant forum split into thousands of subcommunities called "subreddits." Users are allowed to subscribe to whatever subreddits they want to so they can regularly view its content, create posts in any subreddit, and comment on any post they like.
+	  During my daily dose of reddit browsing, I came across <a target="_blank" rel="noopener noreferrer" href="https://www.reddit.com/r/SubredditSimulator/comments/91pjrh/the_view_from_my_offices_toilet_today/">this post</a> and was subsequently pretty confused. <i>How can an office be THAT high?</i> Amidst my bewilderment, I noticed that it came from the subreddit <a target="_blank" rel="noopener noreferrer" href="https://www.reddit.com/r/SubredditSimulator/">SubredditSimulator</a>, and its hilarity immediately grabbed my attention. If you are unfamiliar with how Reddit operates, it is basically a giant forum split into thousands of subcommunities called "subreddits." Users are allowed to subscribe to whatever subreddits they want to so they can regularly view its content, create posts in any subreddit, and comment on any post they like.
 	</p>
 	
 	<p>
-	  But /r/SubredditSimulator is a little different. Regular users can't make their own posts or comments, however they still play a role in the voting system for content. The users that generate the actual content  are all bots who use <a href="https://en.wikipedia.org/wiki/Markov_chain#Markov_text_generators">Markov Chain text generation</a> to create their content, hence the seemingly nonsensical titles and comments. The bots are all modeled after a certain subreddit, and it's text data comes solely from their home. For example, /u/Jokes_SS is meant to mimic posts and comments found on /r/jokes.
+	  But /r/SubredditSimulator is a little different. Regular users can't make their own posts or comments, however they still play a role in the voting system for content. The users that generate the actual content  are all bots who use <a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Markov_chain#Markov_text_generators">Markov Chain text generation</a> to create their content, hence the seemingly nonsensical titles and comments. The bots are all modeled after a certain subreddit, and it's text data comes solely from their home. For example, /u/Jokes_SS is meant to mimic posts and comments found on /r/jokes.
 	</p>
 	
 	<h2>But what is a Markov Chain?</h2>
@@ -37,7 +37,7 @@
 
 	<div style="text-align: center">
 	  <img src="../images/markov_chain.png" width="25%" />
-	  <figcaption><a href="https://en.wikipedia.org/wiki/Examples_of_Markov_chains"> https://en.wikipedia.org/wiki/Examples_of_Markov_chains </a> </figcaption>
+	  <figcaption><a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Examples_of_Markov_chains"> https://en.wikipedia.org/wiki/Examples_of_Markov_chains </a> </figcaption>
 	</div>
 	<p>
 
@@ -77,7 +77,7 @@
 
 	<h2>R Implementation</h2>
 	<p>
-	  We will make use of the <a href="https://cran.r-project.org/web/packages/ngram/ngram.pdf">ngram</a> R package because it has a Markov Chain function named babble() that we will make use of. Our data comes from <a href="https://www.kaggle.com/kazanova/sentiment140">this Kaggle dataset</a>, which contains 1.6 million tweets, which is great for large amounts of word pair associations to create, however there is a trade-off in how long it will take for our script to run. Small datasets are not ideal for generators simply because there will not be as many word pairs to randomly choose from, and sentences will look very similar to the original ones fed into the function. Here is a script I wrote to return a tweet using this data.
+	  We will make use of the <a target="_blank" rel="noopener noreferrer" href="https://cran.r-project.org/web/packages/ngram/ngram.pdf">ngram</a> R package because it has a Markov Chain function named babble() that we will make use of. Our data comes from <a target="_blank" rel="noopener noreferrer" href="https://www.kaggle.com/kazanova/sentiment140">this Kaggle dataset</a>, which contains 1.6 million tweets, which is great for large amounts of word pair associations to create, however there is a trade-off in how long it will take for our script to run. Small datasets are not ideal for generators simply because there will not be as many word pairs to randomly choose from, and sentences will look very similar to the original ones fed into the function. Here is a script I wrote to return a tweet using this data.
 	</p>
 
 	<pre>
@@ -165,19 +165,19 @@ make_tweet()
     
     <div class="footer">
        <div>  
-	 <a href="../index.html" target="blank"><i class="fa fa-home fa-3x"></i></a>
+	 <a target="_blank" rel="noopener noreferrer" href="../index.html" target="blank"><i class="fa fa-home fa-3x"></i></a>
        </div>
 	<div>
-	  <a href="https://www.linkedin.com/in/joe-stoica/" target="blank"><i class="fa fa-linkedin fa-3x"></i></a>
+	  <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/joe-stoica/" target="blank"><i class="fa fa-linkedin fa-3x"></i></a>
 	</div>
 	<div>
-	  <a href="https://twitter.com/Joe_Stoica" target="blank"><i class="fa fa-twitter fa-3x"></i></a>
+	  <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/Joe_Stoica" target="blank"><i class="fa fa-twitter fa-3x"></i></a>
 	</div>
 	<div>
-	  <a href="https://github.com/joestoica" target="blank"><i class="fa fa-github fa-3x"></i></a>
+	  <a target="_blank" rel="noopener noreferrer" href="https://github.com/joestoica" target="blank"><i class="fa fa-github fa-3x"></i></a>
 	</div>
 	<div>
-	  <a href="mailto:joe.stoica@gmail.com" target="blank"><i class="fa fa-envelope fa-3x"></i></a>
+	  <a target="_blank" rel="noopener noreferrer" href="mailto:joe.stoica@gmail.com" target="blank"><i class="fa fa-envelope fa-3x"></i></a>
 	</div>
       </div>
 
