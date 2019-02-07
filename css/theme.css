@@ -11,6 +11,10 @@ body {
     line-height: 1.5;
 }
 
+p {
+    margin: 20px 0px 20px 0px;
+}
+
 h2 {
     font-size: 1.6rem;
 }
@@ -33,6 +37,8 @@ h2 {
     font-size: 30px;
     align-items: center;
     justify-content: center;
+    padding-left: 20%;
+    padding-right: 20%;
 }
 
 .header_h1  {
@@ -136,13 +142,14 @@ h2 {
 
 li {
     margin-bottom: 10px;
-    font-size: 1.3rem;
+    font-size: 1rem;
 }
 
 a {
     text-decoration: none;
     color: #3F7BBF;
-    font-size: 1.3rem;
+    font-size: 1 rem;
+    target: _
 }
 /* Main column */
 .min {
@@ -171,13 +178,18 @@ a {
     color: #c0c0c0;
 }
 
+pre{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 0px;
+}
+
 code {
-    display: inline-block;
+    display: block;
     background-color: #f1f1f1;
     font-family: monospace;
-    margin: 5px;
-    border: 1px solid black;
-    padding: 0px 2px;
+    margin: 0px;
+
 }
 
 /* For mobile */
@@ -226,6 +238,7 @@ code {
 	line-height: 1.2;
 	margin-top: 0;
 	margin-bottom: 0;
+
     }
 }
 
@@ -241,7 +254,8 @@ code {
 .title{
     justify-content: center;
     align-items: flex-start;
-    padding-left: 20px;
+    padding-left: 20%;
+    padding-right: 20%;
 }
 
 .col{

@@ -36,7 +36,7 @@
 	</p>
 
 	<div style="text-align: center">
-	  <img src="../images/markov_chain.png" width="25%" />
+	  <img src="../images/markov_chain.png" width="50%" />
 	  <figcaption><a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Examples_of_Markov_chains"> https://en.wikipedia.org/wiki/Examples_of_Markov_chains </a> </figcaption>
 	</div>
 	<p>
@@ -80,9 +80,7 @@
 	  We will make use of the <a target="_blank" rel="noopener noreferrer" href="https://cran.r-project.org/web/packages/ngram/ngram.pdf">ngram</a> R package because it has a Markov Chain function named babble() that we will make use of. Our data comes from <a target="_blank" rel="noopener noreferrer" href="https://www.kaggle.com/kazanova/sentiment140">this Kaggle dataset</a>, which contains 1.6 million tweets, which is great for large amounts of word pair associations to create, however there is a trade-off in how long it will take for our script to run. Small datasets are not ideal for generators simply because there will not be as many word pairs to randomly choose from, and sentences will look very similar to the original ones fed into the function. Here is a script I wrote to return a tweet using this data.
 	</p>
 
-	<pre>
-	  <code>
-library(tidyverse)
+	<pre><code>library(tidyverse)
 library(ngram)
 library(stringi)
 
@@ -94,7 +92,8 @@ tweets$text &lt;- stri_enc_toutf8(tweets$text, is_unknown_8bit = TRUE, validate 
 
 # Eliminate tweets longer than the max character limit
 tweets &lt;- tweets %>% filter(nchar(text) &lt;= 280)
-# Turn the column containing all of the tweets into one string to be fed into the babble function
+# Turn the column containing all of the tweets into one
+# string to be fed into the babble function
 # This takes a while to run due to the size of the data.
 # This took my 2015 Macbook Pro  51.25 seconds to run, but your mileage may vary
 str <- concatenate(tweets$text)
@@ -103,9 +102,10 @@ str <- concatenate(tweets$text)
 ng <- ngram(str)
 	     
 # This function takes an ngram object and an integer that specifies number of words to return.
-# The trim argument will trim off excessive words after the last punctuation point, and makes the tweet a little more understandable.
+# The trim argument will trim off excessive words after the
+# last punctuation point, and makes the tweet a little more understandable.
 
-K# Input: ngram object, integer, boolean
+# Input: ngram object, integer, boolean
 # Output: String
 
 make_tweet &lt;- function(ngram = ng, num = 35, trim = TRUE){
@@ -115,14 +115,15 @@ make_tweet &lt;- function(ngram = ng, num = 35, trim = TRUE){
   str &lt;- babble(ngram, genlen = num)
   
   # remove mentions, hastags, links, and fix quote and ampersand encoding issue
-  search_patterns <- c("@\\w+ *", "#\\w+ *", "https\\w+ *", "http\\w+ *",
-                       "Http\\w+ *", "HTTP\\w+ *", "www.\\w+ *","://t.co/\\w+)", "://bit.ly/\\w+ *",
+  search_patterns <- c("@\\w+ *", "#\\w+ *", "https\\w+ *",
+		       "http\\w+ *", "Http\\w+ *", "HTTP\\w+ *",
+                       "www.\\w+ *","://t.co/\\w+)", "://bit.ly/\\w+ *",
                        "&quot;", "&amp")
 		     
   replace_patterns <- c(rep("", length(search_patterns) - 1), "and")
 					 
-  # This website helped me with mapply
-  # http://www.howtobuildsoftware.com/index.php/how-do/yUL/r-for-loop-gsub-sapply-trying-to-avoid-for-loop-with-sapply-for-gsub
+# This website helped me with mapply
+# https://bit.ly/2T7Rz5Q
   
   mapply(function(u, v) str<<-gsub(u, v, str), search_patterns, replace_patterns)
   
