@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Joe Stoica</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../css/theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  </head>
+  <body>
+    
+    <!-- Header -->
+    <div class="pages_header">
+      <div class="pages_header_item">
+	<h1>Remaking Visualizations from 538</h1>
+      </div>
+    </div>
+
+    <div class="col space">
+      <div class="title">
+	<h2>Template</h2>
+	<p><a target="_blank" rel="noopener noreferrer" href="https://fivethirtyeight.com/">Fivethirtyeight</a> is one of my favorite news websites for interesting political articles and insightful sports predictions. Fivethirtyeight is spearheaded by the Editor in Chief <a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Nate_Silver">Nate Silver</a>, popular statistician who wrote a great book, <a target="_blank" rel="noopener noreferrer" href="https://www.amazon.com/Signal-Noise-Many-Predictions-Fail-but-ebook/dp/B007V65R54">The Signal and the Noise</a>. But what I truly love about Fivethirtyeight is their unbiased and objective approach to their methodology, and how they present their data through their visualizations. They use a fairly clean and minimal style, following the idea of a low data-ink ratio, which is something I try to replicate in my own visualizations. 
+	</p>
+
+	<p>
+	  The goal of this page aims to recreate some of their visualizations as accurately as possible as ggplot. The primary issue though, is that they don't always publish all of their data used to make the visualizations, so I can only recreate visualizations that have data simply presented, like direct labels for example. This page will be updated as I find more visualizations to replicate.
+	</p>
+
+	<h2>Article from Feb 4th, 2019</h2>
+	<p> My first recreation came from <a target="_blank" rel="noopener noreferrer" href="https://fivethirtyeight.com/features/why-no-one-should-be-surprised-by-democratic-calls-for-northams-resignation/">this article</a> discussing the attitudes toward racism in the Republican and Democratic party.  You can see their visualization in the article. My attempt is below, as well as a link to the code I used to make it.<p/>
+	  <div style="text-align: center">
+	    <img src="../images/plot_538_1.png" width="85%" />
+	    <figcaption><a target="_blank" rel="noopener noreferrer" href="https://github.com/joestoica/joestoica.github.io/blob/master/code/538_1.R">Code here</a>
+	  </div>
+
+	<p> Creating this plot was fairly tricky, but I actually learned quite a bit trying to recreate this, as well as some visualization ideas that I can use in future visualizations. For example, something sublte that they did was actually use geom_point twice, one with the color for the colored point, and then another point geometry directly underneath it that matches the background color of the panel, giving it a subtle but aesthetically pleasing space from the lines. I also wasn't aware of ggplot's ability to add custom labels in the scale_x_continuous() functions, so I was then able to match their labels exactly. Another subtlety that I hadn't thought about was making the axis text grey instead of black, which allows the eye to not be as distracted by placing less emphasis on the axis, and more on the actual visualization. 
+	  
+      </div>
+    </div>
+
+    <div class="footer">
+      <div>
+	<a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/joe-stoica/" target="blank"><i class="fa fa-linkedin fa-3x"></i></a>
+      </div>
+      <div>
+	<a target="_blank" rel="noopener noreferrer" href="https://twitter.com/Joe_Stoica" target="blank"><i class="fa fa-twitter fa-3x"></i></a>
+      </div>
+      <div>
+	<a target="_blank" rel="noopener noreferrer" href="https://github.com/joestoica" target="blank"><i class="fa fa-github fa-3x"></i></a>
+      </div>
+      <div>
+	<a target="_blank" rel="noopener noreferrer" href="mailto:joe.stoica@gmail.com" target="blank"><i class="fa fa-envelope fa-3x"></i></a>
+      </div>
+    </div>
+
+  </body>
+</html>
