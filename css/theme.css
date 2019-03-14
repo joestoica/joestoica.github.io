@@ -16,7 +16,7 @@ p {
 }
 
 h2 {
-    font-size: 1.6rem;
+    font-size/: 1.6rem;
 }
 
 /* Header */
@@ -153,6 +153,11 @@ h2 {
     text-align: center;
 }
 
+.list_image {
+    width: 90%;
+}
+
+
 li {
     margin-bottom: 10px;
     font-size: 1rem;
@@ -231,6 +236,8 @@ code {
 	padding-top: 20px;
 	padding-bottom: 20px;
 	width: 100%;
+	flex-direction: column;
+	align-items: center;
     }
     
     .work_item:first-child {
@@ -303,3 +310,5 @@ code {
 .white>h2{
     margin: 0;
 }
+
+
