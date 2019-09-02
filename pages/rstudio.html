@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Joe Stoica</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../css/theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  </head>
+  <body>
+    
+    <!-- Header -->
+    <div class="pages_header">
+      <div class="header_item">
+	<h1>Using RStudio Efficiently to Optimize Analysis Workflow</h1>
+	<h4 style="justify-content: flex-end;">April 20th, 2019</h3>
+</div>
+</div>
+
+<div class="col space">
+  <div class="title">
+    <p>
+      One thing I've noticed as a statistics student is how time consuming and repetitive data analysis can be. All of my analysis is done in RStudio, objectively the best gosh darn R IDE available. There are so many different tools that RStudio offers that are widely customizeable, ranging from code snippets, RMarkdown templates, keyboard shortcuts, and even personal R packages. However, I've noticed a huge trend among my classmates in which no one really takes advantage of or really even knows about these tools, making their analyses take much longer than they need to. The goal of this article is to share some of my tips to make your analysis run more efficientky and tailor RStudio to your needs.
+    </p>
+  </div>
+
+
+  <h2>Snippets</h2>
+  <p>
+    Snippets are by and large the simplest way to speed up super repetitive parts of your analysis, such as making tons of ggplots or creating model objects quickly. If you're unfamiliar with the snippets concept, read the support page <a target="_blank" rel="noopener noreferrer" href="https://support.rstudio.com/hc/en-us/articles/204463668-Code-Snippets?version=1.2.1335&mode=desktop">here.</a> To view your snippets, go to: Tools -> Global Options -> Code and then on the click on "Edit Snippets..." Here you'll see all of RStudio's default snippets, and this is where you'll be able to add your own. For example, here is what some of my snippets look like :
+    <pre>
+	    <code>## Modeling
+### Create quick model
+snippet mod
+	${1:m} <- fun(${3:y} ~ ${4:x}, data = ${2})
+	
+### ggplot template w/theme
+snippet g
+	${1:df} %>%
+		ggplot(aes(${2:x}, ${3:y}))+
+		geom_${4:}+
+		theme_stoic()
+## General
+### quick read_csv
+snippet r
+	${1:df} <- read_csv("${2:path}")
+
+### Loads tidyverse
+snippet t
+	library(tidyverse)
+	
+### Easy install
+snippet ins
+	install.packages("${1:package}")</code>
+		   </pre>
+    Let's break this down a little. Each snippet begins with a snippet declaration, followed by the name of that snippet. On the following line is the code that will autocompleted inside your R code. So if I was doing an analysis, I could type "mod" and hit tab, and then I have a nice model template that lets you fill it out very quickly. The numbers in the snippet are the order in which you add your own text to the snippet. So in mod, you would change the name for assingment first, followed by the dataframe you're using, then the response variable, and then finally your predictor variables. 
+  </p>
+  
+  <p>
+    Similarly, this is super useful for iterationing more quickly when using ggplot. I have a ggplot skeleton after three key strokes, and I have to add the dataframe, x and y aesthetics, and a geometry and I have a decent plot is done very quickly. In my provided example snippet, I even added my own ggplot plot from my custom R package, which we'll cover next. If you find yourself repetitively typing the same things over and over again, turn it into a snippet and save time!
+  </p>
+
+  <h2>Custom R Packages</h2>
+  <p> I'm no package creating genius, but I have found creating a small personal R package to be extremely useful. For example, in my final spring semester in undergrad, I took a consulting course where we built many different types of regression models, and I would usually have at least three models per assignment. Assumption checking is also a crucial part of model creation, but it can be rather time consuming to have to check every assumption with multiple funcitons every model. Instead, why not just build a function that does it all for you?
+  </p>
+  
+  <p>
+    Say we're building a linear regression model using the lm() function. This means we have to check the normality and equal variance assumptions of the residuals, as well as multicollinearity and outlier checks. This can be bothersome if you have multiple models to check multiple times in your analysis, and if you're the kind of person who does each assumption check function by function you could easily forget something or supply the wrong model as an argument, leading to innaccuracies. But this can be easily solved by writing a function that takes an lm object and displays all of the information you need. If you're doing multiple analyses across a semester though, it's really annoying to have to hunt down that function and rerun to have it in your environment. This is where a personal package really shines. If you store that function in your package, it's as simple as importing your package and calling your custom function, once again making for more efficient analysis.  You can do this for any function you create, as well as creating custom ggplot templates (like I did in my snippet).
+  </p>
+
+  <p>
+    Another bonus is that you can create a custom RMarkdown template. My consulting assingments followed a fairly strict template, and the reports were always structed the same. With a template, I was able to import the layout that fit my professors criteria while also saving a good amount of time compared to setting it up manually. 
+  </p>
+
+  <h2>Keyboard Shortcuts</h2>
+  <p>
+    I'm sure most people use keyboard shortcuts to some extent (I feel like most people use it for cut, copy, paste, and undo), but RStudio allows you to custom map any of the shortcuts it has available (use the shortcut option+shift+k on Mac or alt+shift+k on windows to see them). You can use the default shortcuts, or Navigate to: Tools -> Modify Keyboard Shortcuts to customize your own. Some of the shortcuts that I use most are:
+  </p>
+  <ul>
+    <li>Insert pipe operator: option (or alt) + = </li>
+    <li>Insert assignement operator: option (or alt) + -</li>
+    <li>Add cursor above: command + Up</li>
+    <li>Add cursor below: command + Down</li>
+    <li>Reindent section: command + i (use command+a to select all, then command+i to reindent entire document)</li>
+    <li>Insert R chunk: command + option + i</li>
+  </ul>
+		  
+  <p>
+    Similarly, using the keyboard for quick navigation is so much faster than constantly reaching for the mouse. Holding shift and using the arrow keys allows you to highlight portions of your code. If you use shift+option and the arrow keys, you can highlight whole words at once. If you use shift+command, you will select the whole line. This can make for very fast navigation to make easy changes. 
+  </p>
+  
+</div>
+
+<div class="footer">
+  <div>
+    <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/joe-stoica/" target="blank"><i class="fa fa-linkedin fa-3x"></i></a>
+  </div>
+  <div>
+    <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/Joe_Stoica" target="blank"><i class="fa fa-twitter fa-3x"></i></a>
+  </div>
+  <div>
+    <a target="_blank" rel="noopener noreferrer" href="https://github.com/joestoica" target="blank"><i class="fa fa-github fa-3x"></i></a>
+  </div>
+  <div>
+    <a target="_blank" rel="noopener noreferrer" href="mailto:joe.stoica@gmail.com" target="blank"><i class="fa fa-envelope fa-3x"></i></a>
+  </div>
+</div>
+
+</body>
+</html>

@@ -4,84 +4,51 @@
     <title>Joe Stoica</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="css/theme.css">
+    <link rel="stylesheet" type="text/css" href="css/test.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
   </head>
 
   <body>
+
     
-    <!-- Header -->
-    <div class="header">      
-      <h1 class="typed"><span id="typed"></span></h1>
+    <div class="intro">
+
+      <div class="item">
+	Joe Stoica
+      </div>
+
+      <div class="typed">
+	<span id="typed"></span>
+      </div>
+
+      <div class="links">
+
+	  <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/joe-stoica/" target="blank"><i class="fa fa-linkedin fa-2x"></i></a>
+	  <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/Joe_Stoica" target="blank"><i class="fa fa-twitter fa-2x"></i></a>
+	  <a target="_blank" rel="noopener noreferrer" href="https://github.com/joestoica" target="blank"><i class="fa fa-github fa-2x"></i></a>
+	  <a target="_blank" rel="noopener noreferrer" href="mailto:joe.stoica@gmail.com" target="blank"><i class="fa fa-envelope fa-2x"></i></a>
+
+      </div>
+
       <div class="footer">
-	  <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/joe-stoica/" target="blank"><i class="fa fa-linkedin fa-lg"></i></a>
-	  <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/Joe_Stoica" target="blank"><i class="fa fa-twitter fa-lg"></i></a>
-	  <a target="_blank" rel="noopener noreferrer" href="https://github.com/joestoica" target="blank"><i class="fa fa-github fa-lg"></i></a>
-	  <a target="_blank" rel="noopener noreferrer" href="mailto:joe.stoica@gmail.com" target="blank"><i class="fa fa-envelope fa-lg"></i></a>
+	<a href="home.html">Continue</a>
       </div>
     </div>
     
-    <!-- About -->
-    <div>
-      <h1>About Me</h1>    
-      <div>I am currently a senior in my last semester at Indiana University Bloomington pursuing a Bachelor's degree in statistics, with minors in mathematics and biology. Hopefully, I will be furthering my statistics education this fall in graduate school. Through my analysis, I strive to understand the stories hidden in the data and present my findings in an objective and accurate manner.  When I'm not focusing on statistical work, I love rock climbing, listening to music, and making the best darn cup of coffee you'll ever try.
-      </div>    
-    </div>
-
-    <!-- Experience -->
-    <div>
-      <h1> My Experience </h1>
-      <ul>
-	<li> This summer, I will be a Media Analytics Intern at <a target="_blank" rel="noopener noreferrer" href="https://us.mullenlowe.com/"<a> MullenLowe</a>. I'm super excited for this opportunity!</li>
-								   
-								   <li>Last summer, I was the Finance and Operations intern at <a target="_blank" rel="noopener noreferrer" href="https://www.uplandbeer.com/">Upland Brewing Company</a>.There I focused on production margins throughout the supply chain, and wrote a comprehensive report summarizing my findings report using RMarkdown. </li>
-								   
-	<li>This spring I've been a research assistant in the <a target="_blank" rel="noopener noreferrer" href="http://www.indiana.edu/~cogdev/">Cognitive Development Lab</a> at Indiana University. I've been workng on a personal analysis project using our logitudinal data to explore how children gain knowledge using mathematical concepts.</li>
-
-	<li>Undergraduate Teaching Instructor for <a target="_blank" rel ="noopener noreferrer" href="https://registrar.indiana.edu/browser/soc4182/BIOL/BIOL-L111.shtml">BIOL-L 111:</a> Foundations of Biology: Diversity, Evolution, and Ecology, . This is my second semester being a UTA, and I really enjoy the experience of teaching fellow students essential biology concepts.</li>
-	
-	<li>I am a former undergraduate research assistant in the <a target="_blank" rel="noopener noreferrer" href="https://biology.indiana.edu/research/research-strengths/behavior/rosvall-lab.html">Rosvall Research Lab</a>. I helped assist with data collection on tree swallows nesting behavior, as well as maintain the RFID readers at the field sites.</li>
-      </ul>
-    </div>
-
-    <!-- Skills -->
-    <div>
-      <h1>My Skills</h1>
-      <ul>
-	<li><strong>R: </strong>I use R constantly in my day-to-day life. In school, I used it for the majority of my classwork, whether it's rigorous statistical analysis or exploratory data analysis with an emphasis on visualization. I primarily use R for EDA, statistical model building using various regression techniques, and statistical diagnostics and inference. Similarly, through my computer science courses I've learned dimensionality reduction techniques and other data mining and classification algorithms.</li>
-	
-	<li><strong>Python: </strong> Last semester I was enrolled in a data visualization course, which was taught in Python. We were taught about various data science libraries, such as pandas and numpy. We then visualizated our data using matplotlib, seaborn, and altair.</li>
-	
-	<li><strong>SQL: </strong> I learned the basics of running and querying databases. For example, I downloaded a  database that includes <a target="_blank" rel="noopener noreferrer" href="https://ergast.com/mrd/db/">data from every Formula 1 racing season</a>. I wrote queries that would export the database into several CSVs, and then visualized my findings in R. Blog post coming soon!</li>
-      </ul>
-    </div>
-
-    <!-- Work -->
-    <div>
-	<h1>My Work</h1>
-      <ul>
-	<li><a target="_blank" rel="noopener noreferrer" href="pages/tidytuesday.html">Tidy Tuesday Submissions</a></li>
-	<li><a target="_blank" rel="noopener noreferrer" href="pages/markov.html">Markov Chain Text Generation in R</a></li>
-	<li><a target="_blank" rel="noopener noreferrer" href="pages/538.html">538 Data Viz Remakes</a></li>
-	<li><a target="_blank" rel="noopener noreferrer" href="pages/stoic.html">My personal R package stoic</a></li>
-	<li><a target="_blank" rel="noopener noreferrer" href="pages/election.html">2016 Presidential Election Leaflet Map</a></li>
-	<li><a target="_blank" rel="noopener noreferrer" href="pages/guide.html">Beginner's Guide to Getting Started in R</a></li>
-      </ul>
-    </div>
-
+    
   </body>
+
   <script>
     var typed = new Typed('#typed',{
-    strings:["I am a Student",
-    "I am a Data Analyst",
-    "I am a Statistician",
-    "I am Joe Stoica"],
-    typeSpeed: 10,
-    backSpeed: 10,
-    loop: false,
+	strings:["Student",
+		 "Analyst",
+		 "Statistician"],
+	typeSpeed: 30,
+	backSpeed: 30,
+	loop: true,
     });
   </script>
-
+  
 </html>

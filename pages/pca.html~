@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Joe Stoica</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../css/theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  </head>
+  <body>
+    
+    <!-- Header -->
+    <div class="header">
+      <h1>Visualizing the Growing Partisan Divide in the U.S. Senate using Principle Component Analysis (and fixing my old R bad code)</h1>
+      <div class="footer">
+	<a target="_blank" rel="noopener noreferrer" href="../index.html" target="blank"><i class="fa fa-home fa-lg"></i></a>
+      </div>
+    </div>
+
+    <div class="col space">
+      <div class="title">
+	<p>
+	  Recently it sure feels like the growing partisan divide in the United States is larger than it's ever been. Almost like die-hard sports fans, people cling to their party affiliation as a major part of their identity. While the general public definitely seems more separated, does this concept also apply to our elected officials? In an assignment as a part of my exploratory data analysis undergrad class, we investigated this question using principle component analysis and a dataset involving how U.S. Senators voted from 1989 to 2014 (If I can get my hands on more data I will definitely expand this range). I'll start off by explaining the PCA bit, and then go into my old R code from class and how I remade it to be more R. 
+      </p>
+      </div>
+
+      <div>
+	<h1>So how does it work?</h1>
+	<p>
+	  I won't get into explaining PCA, but there are a ton of resources out there who could explain it better than I can anyway. The data I worked with congressional voting data that was broken down year over year (from 1989 to 2014). Every row in the data is an ID for a congress member, while the columns indicate the every bill that was voted on for that year and how each congress member voted. I recoded the data to be 1 if the vote was 'Yea', -1 to be 'Nay', and 0 if it were another vote. Once every dataframe was recoded, PCA was ran on each year. 
+	</p>
+      </div>
+      
+    </div>
+  </body>
+</html>
