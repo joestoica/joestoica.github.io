@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>xkcd in RStudio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../css/theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  </head>
+  <body>
+    
+    <!-- Header -->
+    <div class="header">
+	<h1>Viewing xkcd comics in RStudio</h1>
+      <div class="footer">
+	<a target="_blank" rel="noopener noreferrer" href="../index.html" target="blank"><i class="fa fa-home fa-lg"></i></a>
+      </div>
+    </div>
+    
+
+    <div class="col space">
+      <img src="https://imgs.xkcd.com/comics/t_distribution.png" width="100%" ></img>
+      <div class="title">
+	<p>
+	  I love <a target="_blank" rel="noopener noreferrer" href="xkcd.com" >the webcomic xkcd</a>. I look forward to seeing the new comic when it's posted every Monday, Wednesday, and Friday. The problem is, sometimes I'm forgetful and I forget to check the website for the latest comic (or sometimes comics if I'm really behind!). But luckily for me, I do use RStudio everyday. This made me realize that hey, I should make something so I can able to view xkcd in RStudio. So I did.
+	</p>
+      </div>
+      <h1>But how?</h1>
+	<p>
+	  The writer of xkcd, Randal Munroe, makes it really easy to get data for all of his comics. He's made an API that allows for queries for every comic he's posted on xkcd's website, and formats it in an extremely simple JSON. The JSON contains meta data for the comic's number, title, a link to the image file, and some other useful things. Using this API, I wrote an R script (and threw it in my R package stoic) that allows you to browse xkcd comics right in the RStudio plot viewer. The code for the script can be found <a target="_blank" rel="noopener noreferrer" href="https://github.com/joestoica/stoic/blob/master/R/xkcd.R">here.</a> This function takes either a number, which specifies the comic's unique ID number, or a boolean asking whether you want to view a random comic. After the function runs, it allows you to go to the previous or next comic ID, or another random comic. There are a few comics that don't work in the function (the 404 page has comic ID 404, and I don't know how to add .gif compatability). But for the most part, you can view all the comics! If you want to try it, install my package through the GitHub and give it a go! 
+	</p>
+    </div>
+
+  </body>
+</html>

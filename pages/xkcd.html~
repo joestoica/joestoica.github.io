@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>template</title>
+    <title>xkcd in RStudio</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../css/theme.css">
@@ -11,7 +11,7 @@
     
     <!-- Header -->
     <div class="header">
-	<h1>Title</h1>
+	<h1>Using R to view xkcd comics in RStudio</h1>
       <div class="footer">
 	<a target="_blank" rel="noopener noreferrer" href="../index.html" target="blank"><i class="fa fa-home fa-lg"></i></a>
       </div>
@@ -21,6 +21,7 @@
     <div class="col space">
       <div class="title">
 	<p>
+	  I love <a target="_blank" rel="noopener noreferrer" href="xkcd.com" >the webcomic xkcd</a>
 	</p>
       </div>
     </div>
