@@ -1,0 +1,495 @@
+---
+title: "Exam 2 Google Doc"
+author: "Joe Stoica"
+date: "11/15/2019"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(alr4)
+```
+
+# Material that should be added (unbold if added)
+- **Transformations**
+- **Outlier/leverage/influential points**
+- **Theorem 3 (AL added 11/15 9:15 am)**
+- **Interactions**
+- **Polynomials**
+- **Weighted least squares**
+- **Anything else?**
+
+- This is from before the first exam, but I think he will test us on it again:
+
+|--------------+-----------------------------+--------------------|
+| Transforming | To #                        | To log             |
+| From #       | log(e^$\beta$1) (no change) | log(new%^$\beta$1) |
+| From log     | e^$\beta$1                  | new%^$\beta$1      |
+|--------------+-----------------------------+--------------------|
+
+# Chapter Breakdown
+## Chapter 5 - Factors and Polynomials
+
+- When using factors, you are comparing means at different levels.  $\beta$ tells you the change in mean as you move from one level to the next.  (Accumulative as you move to 3rd and higher levels.  Intercept is 1st level of factor.) Need interactions if you think the SLOPE is different at different levels. (plot(Effects) to see.)  MAIN EFFECTS MODEL (no interactions) is sufficient if intercepts are different but slopes the same for all models.
+
+```{r}
+lm(cycles ~ (len + amp + load)^2, data = Wool) # is the same as
+lm(cycles ~ len + amp + load + len:amp + amp:load + len:load ,data = Wool)
+```
+
+- When adding interactions, you CAN keep just some.  (You don’t have to keep everything on the same level)
+
+- Polynomial necessary if response ~ regressor is smooth but not straight.
+```{r}
+lm(MaxSalary ~ poly(Score, 2, raw = TRUE)) # is the same as
+lm(MaxSalary ~ Score + I(Score^2))    
+#(plot(Effects) to see.  
+```
+
+- Tukey Test (Ch 9) can recommend what should be a polynomial.
+
+### Marginality Principle: 
+
+If you include a polynomial/interaction, you must also include all lower-level regressors
+
+## Chapter 6 - F-Tests, anova, p-value interpretation
+
+- Use anova() to perform f-tests
+
+- If predictor can be interpreted as continuous or factor, then continuous regressor is just a special case of factor.  This means you can do anova where H0 is continuous model and H1 is factorized model.  anova(continuous, factor) -- low p value means factorized is better.
+
+Also, anova(reduced, full) -- low p-value=full model favored
+
+## Chapter 7 - WLS
+
+- If we are given SD in the data, then weights=1/SD^2
+
+```{r}
+sqrt(diag(hccm(m1, type = "hc3"))) #  new standard errors with weights (10/24)
+```
+
+```{r hccm examples}
+m4 <- lm(Y ~ ., sniffer)
+library(lmtest)
+coeftest(m4, vcov=hccm)
+```
+
+- hccm = heteroscedasticity-corrected covariance matrix = sandwich estimator
+
+- If using WLS, use residuals(m1, type="pearson") to get correct residuals
+
+## Chapter 8 - Transformations
+
+
+## Chapter 9 - Residual diagnostics, outliers
+
+***
+
+# Hypothesis Tests
+
+## Chapter 5
+
+## Chapter 6 
+
+### F-Test
+
+```{r}
+m1 = lm(lifeExpF ~ group, data = UN11)
+m2 = lm(lifeExpF ~ group + log(ppgdp), data = UN11)
+m3 = lm(lifeExpF ~ group * log(ppgdp), data = UN11)
+```
+
+```{r}
+anova(m1, m2)#  m1 reduced.  m2 full.  
+```
+
+- Null: Reduced model is appropriate
+- Alternative: Full model is appropriate
+
+### Three types of anova
+
+#### Type I
+
+```{r}
+anova(m3) #  m1 is full model. Sequential. (Probably not what you want to use.)
+```
+
+
+- Null: The ith row added to a model that contains all of the predictors above it **should not be added**
+- Alternative: The ith row added to a model that contains all of the predictors above it **should be included in the model**
+
+#### Type II
+
+- Obeys marginality principle
+
+```{r}
+Anova(m3)
+```
+
+
+- For whatever line the p-value is on, you test the null for the other predictor in the model (but not the interaction). If the p-val is significant, conclude that adding the term from the same line is appropriate
+
+- Null: (NOT INCLUDING THE INTERACTION FOR MAIN EFFECTS) Model without the regressor is appropriate
+- Alternative: Model including that regressor is important
+
+- **For the interaction line:** 
+
+- Null: Model without the interaction is appropriate
+- Alternative: Model including that interaction is appropriate
+
+
+#### Type III
+
+- Very similar to type II, but doesn't use marginality principle, meaning that the term from the line whose p-val you're testing is the only variable that is held out, including interactions.    
+
+```{r}
+Anova(m2, m3, type = "III")
+```
+ 
+- Null: Model without the regressor is appropriate
+- Alternative: Model including that regressor is appropriate
+
+#### Summary:
+
+- In both anovas II and III, H_0 is there is no difference between models (or in type 2, no difference as you add regressors.) 
+- H_1 is the full model is more robust (or additional regressors are significant.)
+- Marginality Principle keeps any lower level regressor that includes that predictor.  (So if there is an interaction, MP says keep both first level regressors also.)
+
+
+### linearHypothesis test (10/17) 
+
+- Allows you to specify a vector for testing the significance between two coefficients (something like c(0,1,1,0,0) to test the second and third coefficient against one another.
+
+- This is used when you have factors. Normally, in the lm summary you can only see change from one factor level to the next, but this allows you to compare directly any two. 
+
+- Low p could mean slope OR intercept OR both could be different for the two factors.
+
+```{r}
+m3 = lm(lifeExpF ~ group * log(ppgdp), data = UN11)
+linearHypothesis(m3, c(0, 1, -1, 0, 0 ,0)) # groupother - groupafrica = 0
+```
+
+- Null: groupother - groupafrica = 0
+- Alternative: groupother - groupafrica $\neq$ 0
+
+
+```{r}
+L = matrix(c(0, 1, -1, 0, 0, 0,
+             0, 0, 0, 0, 1, -1),
+           byrow=TRUE, nrow=2)
+linearHypothesis(m3, L)
+```
+
+- Null: groupother - groupafrica = 0 or groupother:log(ppgdp) - groupafrica:log(ppgdp) = 0
+- Alternative: groupother - groupafrica $\neq$ 0 or groupother:log(ppgdp) - groupafrica:log(ppgdp) $\neq$ 0
+
+## Chapter 7 -
+
+- t-test of coefficients using new weighted covariance matrix (10/24)
+
+### Test for non constant variance. (10.24)
+
+```{r}
+ncvTest(m4)                    
+```
+
+- Null: Constant variance
+- Alternative: That variance depends on the mean
+
+- Do lots of these to see which predictor(s) has non constant variance and is therefore the best Z to use in the weight calculation.    (10/24)
+- If all have the same df, you can just compare the ChiSquare results in the ncvTests
+
+```{r}
+Z1=with(sniffer, ncvTest(m4, ~ GasPres)) # H1 that variance depends on GasPres  (PS7)
+Z2=with(sniffer, ncvTest(m4, ~ TankTemp))
+Z3=with(sniffer, ncvTest(m4, ~ GasPres + TankTemp))
+Z4=with(sniffer, ncvTest(m4, ~ GasPres + TankTemp + GasTemp + TankPres))
+Z5=with(sniffer, ncvTest(m4))
+
+
+# Chi-sq test
+1 - pchisq(Z4$ChiSquare - Z3$ChiSquare, Z4$Df - Z3$Df) # Z3 is significantly better than Z4
+1 - pchisq(Z3$ChiSquare - Z2$ChiSquare, Z3$Df - Z2$Df) # Z2 is significantly  better than Z3
+1 - pchisq(Z3$ChiSquare - Z1$ChiSquare, Z3$Df - Z1$Df) # Z1 is not significantly better than Z3
+```
+
+- Null: The variance structure of the right part is better than the left
+- Alternative: The variance structure of the left part is better than the right
+
+## Chapter 8
+
+
+
+## Chapter 9
+
+
+
+# Plots Interpretation
+
+
+## Chapter 5
+
+### Effects Plots
+
+```{r}
+plot(Effect("group", m2)) #Effects Plot, all effects separate  
+plot(Effect(c("group", "ppgdp"), m2)) # effect of combination
+plot(Effect(c("group", "ppgdp"), m2), multiline = TRUE)
+plot(allEffects(m2), ylim=c(10,50)) #group and ppgdp side by side. ylim to keep same scale
+``` 
+
+### Some residual plots
+
+```{r}
+plot(m1, which = 1) # residual plots (against fitted y)
+plot(resid(m1) ~ fitted(m1)) # same
+residualPlot(m1) # Plots residuals against FITTED VALUES.  Watch for curve (model is wrong) cone (needs weights)
+```
+
+- Compare continuous regressor sorted by level.  Same as plot(allEffects) except you can see them all together along with data points (so you can see, for example, that all the Africa data is on one end.)
+
+```{r}
+boxplot(log(acrePrice) ~year, data = MinnLand)
+```
+
+- Compare medians/spread of levels.  (One factor, one continuous.
+
+## Chapter 6
+
+
+
+## Chapter 7 
+
+
+
+## Chapter 8 
+
+### Transformations
+
+```{r}
+powerTransform(cbind(A, S, C, P, E) ~ 1, cloud)
+```
+
+- Recommends transformations for regressors.  
+- cbind(predictors only)
+
+```{r}
+invTranPlot(y, x) 
+```
+
+- Does the same thing for just one predictor 
+
+```{r}
+inverseResponsePlot(m3, lambda = c(0, .5, 1))  
+# (or just invResPlot)
+```
+
+- Recommends transformation for response.  Can include lambdas you want tested for.  Otherwise, it only tests -1, 0, 1
+
+- Do this after you transform responses
+
+```{r}
+boxCox(m3)
+```
+
+- Recommends transformation for response
+
+```{r}
+bcPower(brains$BrainWt, 0, jacobian.adjusted=FALSE) 
+bcPower(brains$BrainWt, 0, jacobian.adjusted=TRUE)   #*Are these just other ways of doing powerTransform?  Do we need to know these?
+yjPower(brains$BrainWt, 0, jacobian.adjusted=FALSE)
+```
+
+## Chapter 9 -
+
+### Influential/Outlier Analysis
+
+```{r}
+influenceIndexPlot(m4)
+```
+
+1st row - cook distribution - distance indicates INFLUENCE (affects beta-hats)
+2nd row - t values
+3rd row - Bonferroni - p-values scaled for size of sample.  (want them all to be 1 because Bonferroni is conservative.  Indicates outliers)
+4th row - hat values - indicates leverage (affects y-hat_i)
+
+```{r}
+dataEllipse(UN11$pctUrban, log(UN11$ppgdp))
+```
+
+Default levels are .05 and .95.  Use to determine high leverage points (but influenceIndexPlot also does this.)
+
+```{r}
+outlierTest(m1)
+```
+
+- Gives same info from influenceIndexPlot for p-value
+
+TODO 
+
+- Null:
+- Alternative: 
+
+### Tukey test. 
+
+- This is a test for curvature
+- Low p-value means that regressor should be a quadratic.  
+
+```{r}
+residualPlots(m4)
+```
+
+TODO
+- Null:
+- Alternative: 
+
+# Theory
+
+Important pieces of theory/equations/theorems 
+
+## Previous Exams
+
+### Theorem 1 
+
+### Theorem 2 
+
+## Chapter 5
+
+
+## Chapter 6
+
+### Theorem 3:
+If y ~ N(mu, V), l = By and q = y’Ay, then q and l are independent iff BVA = 0 
+
+In words: if y is normally distributed, l is some linear transformation of y, and q is a scalar in the form above for some A, then you can show that q and l are independent by showing BVA = 0.
+
+Example: 1(a) from Homework 7. Can show $\hat\beta$ and $\hat\sigma^2$ are independent.
+
+Theorem 3’
+If y ~ N(mu, V), q_1 = y’(A_1)y  and q_2 = y’(A_2)y, then q_1 and q_2 are independent iff A_1(V)A_2 = 0 
+
+In words: if y is normally distributed and q_1 and q_2 are scalars in the form above for some A_1 and A_2, then you can show that q and q_1 are independent by showing A_1(V)A_2 = 0.
+
+Example: 1(b) from Homework 7. Can show Y’(H-H_1)Y and Y’(I-H)Y are independent.
+    
+
+## Chapter 7
+
+
+## Chapter 8
+
+
+## Chapter 9
+
+
+
+
+# Dr. Valdivia Stuff
+Exam starting AT 9:30 until 11:10  (I may have missed some stuff.  He was talking fast.)
+Priority: Class, reading assignments, Problem Sets
+Not appendix readings
+3 questions
+1 theory/r
+2 applications/interpretation
+Clear statements for null and alt hypothesis (any time you see a p value) (words OR math)
+For example, tukey test
+Write in terms of full and reduced models (which is alt and which is null)
+Bonferroni, Ncv test, Anova tests
+7-8 focus but 5 and 6 basic to everything
+Factors, interactions, polynomials, interpret coefficients, effect plots
+Complex regressors especially factors
+Very good wiuth anova, type 2, difference between
+Very good with marginality principle
+(If you include interaction, include main effects)
+Cov (ch 7) be good with weights
+Correct with sandwich
+Use and interpret weights
+Different Zs, recognize best/simplest model
+Look at gas model example with Zs
+Ch 8 know how to transform variables
+First transform regressors, then response
+Try to use transformations that are easier to interpret (fixed lambdas)
+Boxcox gives you confidence interval so if it includes ⅓ and ½ pick best (the one easiest to interpret?)
+Interpret likelihood ratio test (boxcox?)
+In boxcox, small p means that is the WRONG transformation.  That transformation is the null, and you can reject it.
+Know how to use code provided in lab to find transformations (?)
+Ch 9 interpret residual plots
+Determine if there is violation to assumptions (Curve in resid plot or cone)
+Make fixes to those problems.  Cone… missing interaction? Weight?
+Influential analysis
+Select subset of rows that could dramatically change your results.  Don;’t remove rows but discuss how it changes results.
+Mention problems in residual plots clearly at the beginning
+All theory after 1st exam
+Theorem 1, 2, 3
+Should not take more than 15 min
+Everything related to hat matrix
+Results presented in class
+Manipulate hat
+H_ij
+Remember how you get h_ii
+h_ii<= 1/r
+How to build f test
+How f and t are equivalent when testing single regressor (?)
+Compare ratios of f and t
+Show chi-squares independent
+RSS independent
+Interpretations factors versus continuous
+General hypothesis test lots of stuff compare L matrix C vector (WTF??)
+
+
+NOT 
+jacobian
+derivatives
+
+Powertransform only include regressors you are considering transforming do not include factors might need to add constant to make everything positive.
+
+Look at scatterplot to decide which ones you might want to transform
+(large or small magnitude)
+Look at scatterplot again after you transform
+Don’t waste time transforming if it doesn’t look any better
+Multiple regression, lots of transformation might not be great.  Too hard to interpret.
+10/24 lab
+ncvTests
+From graph (against residuals) , Larger tank temp, bigger variance
+var(y_i) = sigma^2/w_i
+
+Want var to be large when tank temp large so smaller weight
+So weight = 1/tank temp  
+So sigma_2*tank temp
+Weight is just 1/tank temp
+If decreasing, then weight = w_i
+Sandwich estimator will have larger SE but that’s OK.
+coeftest(m4, vcov=hccm)   Gives lm coefficients with corrected SEs
+Anovas:
+Type 1 anova - sequential - USELESS
+line 1 compares no regressor to x1 only
+Line 2 compares x1 only to x1 and x2
+Etc.
+Type 2 Anova - capital A - most useful
+Respects marginality
+Line 1 x2 and x3 versus all 3
+Line 2 x1 and x3 versus all 3
+If fertility * log(ppgd)
+Line 1 is log(ppgdp) versus fertility and log(ppgdp)
+Line 2 is vertility versus fertility and log(ppgdp)
+Line 3 fertility and log(ppgdp) verus both plus interaction
+If you have factors, it is taking out all the columns (levels) of that factor
+OH MY GOSH!!  WE GET IT!! MOVE ON!!!
+Type 3 anova
+Does not respect marginality
+(lower case) anova(m1, m2)
+Compares two models
+Residuals
+Ignore the lines it draws.  Can you see curve with the points only?  If not, then you are OK.
+Tukey test
+Test of curvature from resid plots
+What if you add a quadratic term to that element of the model?
+Low P means that reject reduced (no quadratic) model in favor of quadratic for that predictor
+Same as anova to test with and without quadratic. 
+
+
+
+
+
+
+
