@@ -4,15 +4,15 @@
 * {
     box-sizing: border-box;
     font-weight: 100;
-    color: #454545;
-    background-color: #f9f9f9;
+    color: #eaebeb;
+    background-color: #252729;
 }
 
 
 /* Main tags */
 a {
     text-decoration: none;
-    color: #5190ed;
+    color: #3aacff;
 }
 
 body {
@@ -79,12 +79,12 @@ ul {
 }
 
 .fa {
-    color:  #343434;
+    color:  #eaebeb;
     padding-top: 20px;
     padding-left: 20px;
 }
 .fa:hover{
-    color: #5a5a5a;
+    color: #3aacff;
 }
 
 .pages_header_item {
