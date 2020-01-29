@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>template</title>
+    <title>ABC</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3.0.0/es5/tex-mml-chtml.js">
+  </script>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../css/theme.css">
@@ -11,7 +16,7 @@
     
     <!-- Header -->
     <div class="header">
-	<h1>Title</h1>
+	<h1>Journal Recreation: Approximate Bayesian computation for disease outbreaks </h1>
       <div class="footer">
 	<a target="_blank" rel="noopener noreferrer" href="../index.html" target="blank"><i class="fa fa-home fa-lg"></i></a>
       </div>
@@ -21,7 +26,36 @@
     <div class="col space">
       <div class="title">
 	<p>
+	  This post is a summary of the final project that I completed for my Statistical Computing course in my first semester of grad school. The goal of this project was to recreate two figures from a paper authored by Tony and Stumpf, “Simulation-based model selection for dynamical systems in systems and population biology”(which can be found <a target="_blank" rel="noopener noreferrer" href="https://academic.oup.com/bioinformatics/article/26/1/104/182571)"> here</a>). This paper uses the approximate bayesian computation (or ABC) algorithm to model a few fairly complex statistical models, and the model that we replicated is involved with applying ABC to models comparing different strains of influenza viruses. The questions of Tony and Stumpf's original analysis was to see "... whether (i) different outbreaks of the same strain and (ii) outbreaks of different molecular strains of the influenza virus can be described by the same model of disease spread."  In this post, I'll give a quick summary of how ABC works, and how my group went about implementing the algorithm to match the their results. 
 	</p>
+	
+	<h1>Some additional background</h1>
+	<p>
+	  In order to better explain the algorithm, I first want to describe some more specifics about the project. One part of this data in this project comes from two outbreaks (but the same virus) in Michigan, one occuring in 1978-1979 and one in 1980-1981. Let's refer to this as data table A. The second outbreak is two different viruses from two different time points. All of this data is arranged in a table, which tells you how many people were infected out the potential number of people infected. Let this be table B. Using this data, we will apply ABC to see answer the questions above, which is done is pretty elegant way (which will be described below!).
+	</p>
+	
+	<h1>What is ABC?</h1>
+
+	<p>
+	  ABC is a seemingly magical algorithm that allows for the calculation of parameters that belong to a distribution (referred to as the posterior distribution) that we can calculate using a specified prior distribution (this is where the initial parameters for our data came from) and the data we have regarding the influenza outbreaks. We now have most of the pieces, so here's how we'll put them together:
+
+	  <ol>
+	    <li>
+	      We begin by drawing parameters from our prior distribution. In this case, the authors specified a uniform distribution for each of the parameters, which in this case we had 4, which were two pairs of two. Essentially, this is just four independent random numbers between 0 and 1. One pair of parameters will belong to the first member of the viral outbreak pair. For example, if we were generating data to match data table A, we use the first two parameters to create data for the outbreak pertaining to 1978-1979, and the second two parameters for 1980-1981. 
+	    </li>
+
+	    <li>
+	      Once we have the pairs of parameters, we plug them into a data generating function that will generate data that comes from the same probability model that our original data came from. This looks like: \[w_{js} = {s\choose j}w_{jj}(q_cq_h^j)^{s-j}\]
+	      This looks confusing, and it is. The main takeaway is that j represents the number of people infected out of a total number of s people. \(w_{jj}\) is the jth diagonal element in the generated data from step 1. \(q_c\) and \(q_h\) are the probabilities that someone is infected from their community and household respectively. To build this data, we began by creating the first row, which is specified by \(w_{0s} = q_c^s\). The diagonal of \(w\) is created using \(w_{jj} = 1 - \sum_{i=0}^{j-1}w_{ij}\). The rest of the data was then created iteratively using the first equation for \(w_{js}\).  
+	    </li>
+
+	    <li>
+	      Now that we have the data generated, we need to create a way to meausure whether the data we have generated is similar to the original data that we have. The authors did this by calculating the
+	    </li>
+	  </ol>
+	  
+	</p>
+	
       </div>
     </div>
 

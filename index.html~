@@ -29,7 +29,7 @@
       </div>
       
       <div>
-	<div class="topic"><h1>About</h1></div>
+	<h1>About</h1>
 	<p>
 	  Hi, I'm a graduate student from Indiana University pursuing a master's degree in statistical science. This past summer I was the media analytics intern at  <a target="_blank" rel="noopener noreferrer" href="http://www.mullenlowemediahub.com/">MullenLowe Mediahub</a>. Additionally, I've previously worked at <a target="_blank" rel="noopener noreferrer" href="https://www.uplandbeer.com/">Upland Brewing Co.</a>, where I compiled and analyzed supply chain data, and with the <a target="_blank" rel="noopener noreferrer" ref="http://www.indiana.edu/~cogdev/">Cognitive Development Lab</a> at IU, where I completed a semester long analysis project regarding the pathways for how children learn the mathematical concept of place value. Have a closer look at some of the things I've worked on or feel free to <a target="_blank" rel="noopener noreferrer" href="mailto:contactjoestoica@gmail.com" target="blank">contact me</a>.
 	</p>
@@ -39,7 +39,7 @@
     <div>
       <!-- Work -->
       <div>
-	<div class="topic"><h1>Portfolio</h1></div>
+	<h1>Portfolio</h1>
 	<ul>
 	  <!---<li>Dec 17, 2019 - <a target="_blank" rel="noopener noreferrer" href="pages/mABC.html">Journal Recreation: Approximate Bayesian computation for disease outbreaks </a></li>--->
 	  <li>Oct 10, 2019 - <a target="_blank" rel="noopener noreferrer" href="pages/xkcd.html">Viewing xkcd comics in RStudio</a></li>
