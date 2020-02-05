@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:200,300,400");
 
-
 * {
     box-sizing: border-box;
     font-weight: 100;
@@ -19,6 +18,7 @@ body {
     font-family: Roboto;
     margin: 0 22.5%;
     line-height: 2;
+    background-color: #252729;
 }
 
 code {
