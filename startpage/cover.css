@@ -12,6 +12,8 @@
 }
 
 /* Links */
+
+
 a,
 a:focus {
   color: #fff;
@@ -31,7 +33,7 @@ body {
   height: 100%;
   background-color: #303336;
   font-family: 'Product Sans1', sans-serif;
-  font-weight: 400;
+  font-weight: 50;
   
 }
 
@@ -47,8 +49,8 @@ body {
 
 #time {
 	color: white;
-	font-size: 100px;
-	padding-bottom: 80px;
+	font-size: 145px;
+	padding-bottom: 50px;
 	font-weight: 900;
 	font-family: 'Product Sans2', sans-serif;
 }
@@ -156,22 +158,18 @@ button {
 .quicklinks {
 	float:left;
 }
-.link img {
-	height: 36px;
-}
+
 .link a {
     line-height: 1.85rem;
 }
-.daily, .streaming, .custom {
+.topic{
 	float:left;
 	margin-bottom: 40px;
 }
-.creative {
-	float:left;
-	margin-bottom: 40px;
-}
+
 .link {
-	margin-right: 20px;
+    font-size: 0.9rem;
+	margin-right: 5%;
 	float:left;
 }
 
@@ -209,6 +207,8 @@ h3 {
 }
 
 
-/*
- * Footer
- */
+.box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
