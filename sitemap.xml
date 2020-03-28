@@ -3,33 +3,15 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://joestoica.com/</loc>
-    <lastmod>2020-03-28T00:00:00+00:00</lastmod>
+    <loc>/categories/</loc>
   </url>
   
   <url>
-    <loc>https://joestoica.com/now/</loc>
-    <lastmod>2020-03-28T00:00:00+00:00</lastmod>
+    <loc>/</loc>
   </url>
   
   <url>
-    <loc>https://joestoica.com/about/</loc>
-  </url>
-  
-  <url>
-    <loc>https://joestoica.com/archive/</loc>
-  </url>
-  
-  <url>
-    <loc>https://joestoica.com/categories/</loc>
-  </url>
-  
-  <url>
-    <loc>https://joestoica.com/projects/</loc>
-  </url>
-  
-  <url>
-    <loc>https://joestoica.com/tags/</loc>
+    <loc>/tags/</loc>
   </url>
   
 </urlset>
