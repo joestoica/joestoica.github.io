@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>visualization on Joe Stoica</title>
+    <link>https://joestoica.com/tags/visualization/</link>
+    <description>Recent content in visualization on Joe Stoica</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright> </copyright>
+    <lastBuildDate>Sun, 17 Feb 2019 14:46:36 -0500</lastBuildDate>
+    
+	<atom:link href="https://joestoica.com/tags/visualization/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Remaking Visualizations from 538</title>
+      <link>https://joestoica.com/posts/538/</link>
+      <pubDate>Sun, 17 Feb 2019 14:46:36 -0500</pubDate>
+      
+      <guid>https://joestoica.com/posts/538/</guid>
+      <description>Fivethirtyeight is one of my favorite news websites for interesting political articles and insightful sports predictions. Fivethirtyeight is spearheaded by Editor in Chief Nate Silver, the popular statistician who wrote the excellent book, The Signal and the Noise. But what I truly love about Fivethirtyeight is their unbiased and objective approach to their methodology, and how they present their data through their visualizations. They use a fairly clean and minimal style, following the idea of a low data-ink ratio, which is something I try to replicate in my own visualizations.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -7,9 +7,37 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright> </copyright>
+    <lastBuildDate>Sat, 28 Mar 2020 12:27:13 -0500</lastBuildDate>
     
 	<atom:link href="https://joestoica.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Projects</title>
+      <link>https://joestoica.com/tags/projects/</link>
+      <pubDate>Sat, 28 Mar 2020 12:27:13 -0500</pubDate>
+      
+      <guid>https://joestoica.com/tags/projects/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Statistics</title>
+      <link>https://joestoica.com/tags/statistics/</link>
+      <pubDate>Sat, 28 Mar 2020 12:27:13 -0500</pubDate>
+      
+      <guid>https://joestoica.com/tags/statistics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>visualization</title>
+      <link>https://joestoica.com/tags/visualization/</link>
+      <pubDate>Sun, 17 Feb 2019 14:46:36 -0500</pubDate>
+      
+      <guid>https://joestoica.com/tags/visualization/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

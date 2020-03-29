@@ -1,0 +1,11 @@
+:root {
+  --dark-background: #2F3437;
+  --dark-background-secondary: #2F3437;
+  --dark-header: #2F3437;
+  --dark-color: #fff;    
+}
+
+.logo__cursor{
+    background: #3aacff;
+}
+    

@@ -11,6 +11,16 @@
 <meta name="keywords" content=""/>
 <meta name="robots" content="noodp"/>
 <link rel="canonical" href="https://joestoica.com/" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+<style>
+    .item {
+    padding: 10px;
+    }
+    
+    .foot {
+        color: #fff;
+    }
+</style>
 
 
 
@@ -71,15 +81,11 @@
         
       
         
-          <li><a href="/posts">Blog</a></li>
-        
-      
-        
           <li><a href="/now">Now</a></li>
         
       
         
-          <li><a href="/projects">Projects</a></li>
+          <li><a href="/posts">Posts</a></li>
         
       
       
@@ -93,15 +99,11 @@
       
     
       
-        <li><a href="/posts">Blog</a></li>
-      
-    
-      
         <li><a href="/now">Now</a></li>
       
     
       
-        <li><a href="/projects">Projects</a></li>
+        <li><a href="/posts">Posts</a></li>
       
     
   </ul>
@@ -126,7 +128,6 @@
   </span>
 </header>
 
-
       <div class="content">
         
   
@@ -140,6 +141,80 @@
 
   <div class="posts">
     
+    <div class="post on-list">
+      <h1 class="post-title"><a href="https://joestoica.com/posts/mabc/">Journal Recreation: Approximate Bayesian computation for disease outbreaks</a></h1>
+      <div class="post-meta">
+        
+          <span class="post-date">
+            2020-03-28
+          </span>
+
+          
+        
+        
+        
+      </div>
+
+      
+        <span class="post-tags">
+          
+            #<a href="https://joestoica.com/tags/statistics/">Statistics</a>&nbsp;
+          
+            #<a href="https://joestoica.com/tags/projects/">Projects</a>&nbsp;
+          
+        </span>
+      
+
+      
+
+      <div class="post-content">
+        
+          
+            This post is a summary of the final project that I completed for my Statistical Computing course in my first semester of grad school. The goal of this project was to recreate two figures from a paper authored by Tony and Stumpf, “Simulation-based model selection for dynamical systems in systems and population biology”(which can be found here. This paper uses the approximate bayesian computation (or ABC) algorithm to model a few fairly complex statistical models.
+          
+        
+      </div>
+      
+        <div><a class="read-more button" href="/posts/mabc/">Read →</a></div>
+      
+    </div>
+    
+    <div class="post on-list">
+      <h1 class="post-title"><a href="https://joestoica.com/posts/538/">Remaking Visualizations from 538</a></h1>
+      <div class="post-meta">
+        
+          <span class="post-date">
+            2019-02-17
+          </span>
+
+          
+        
+        
+        
+      </div>
+
+      
+        <span class="post-tags">
+          
+            #<a href="https://joestoica.com/tags/visualization/">visualization</a>&nbsp;
+          
+        </span>
+      
+
+      
+
+      <div class="post-content">
+        
+          
+            Fivethirtyeight is one of my favorite news websites for interesting political articles and insightful sports predictions. Fivethirtyeight is spearheaded by Editor in Chief Nate Silver, the popular statistician who wrote the excellent book, The Signal and the Noise. But what I truly love about Fivethirtyeight is their unbiased and objective approach to their methodology, and how they present their data through their visualizations. They use a fairly clean and minimal style, following the idea of a low data-ink ratio, which is something I try to replicate in my own visualizations.
+          
+        
+      </div>
+      
+        <div><a class="read-more button" href="/posts/538/">Read →</a></div>
+      
+    </div>
+    
     <div class="pagination">
   <div class="pagination__buttons">
     
@@ -152,17 +227,45 @@
       </div>
 
       
-        <footer class="footer">
-  <div class="footer__inner">
-    
-      <div class="copyright copyright--user"> </div>
-    
+          <div class="foo">
+    <a class="item" href="https://www.linkedin.com/in/joe-stoica/"><i class="fa fa-linkedin fa-2x"></i></a>
+    <a class="item" href="https://twitter.com/Joe_Stoica"><i class="fa fa-twitter fa-2x"></i></a>
+    <a class="item" href="https://github.com/joestoica"><i class="fa fa-github fa-2x"></i></a>
+    <a class="item" href="mailto:contactjoestoica@gmail.com"><i class="fa fa-envelope fa-2x"></i></a>
   </div>
-</footer>
 
 <script src="https://joestoica.com/assets/main.js"></script>
 <script src="https://joestoica.com/assets/prism.js"></script>
+<script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [['$$','$$']],
+      processEscapes: true,
+      processEnvironments: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      TeX: { equationNumbers: { autoNumber: "AMS" },
+           extensions: ["AMSmath.js", "AMSsymbols.js"] }
+    }
+    });
+    MathJax.Hub.Queue(function() {
+      
+      
+      
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i = 0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
 
+    MathJax.Hub.Config({
+    
+    TeX: { equationNumbers: { autoNumber: "AMS" } }
+    });
+  </script>
+
+</html>
 
       
     </div>

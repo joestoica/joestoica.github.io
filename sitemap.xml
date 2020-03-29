@@ -3,6 +3,31 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://joestoica.com/posts/mabc/</loc>
+    <lastmod>2020-03-28T12:27:13-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joestoica.com/posts/</loc>
+    <lastmod>2020-03-28T12:27:13-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joestoica.com/tags/projects/</loc>
+    <lastmod>2020-03-28T12:27:13-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joestoica.com/tags/statistics/</loc>
+    <lastmod>2020-03-28T12:27:13-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joestoica.com/tags/</loc>
+    <lastmod>2020-03-28T12:27:13-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://joestoica.com/</loc>
     <lastmod>2020-03-28T00:00:00+00:00</lastmod>
   </url>
@@ -10,6 +35,16 @@
   <url>
     <loc>https://joestoica.com/now/</loc>
     <lastmod>2020-03-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joestoica.com/posts/538/</loc>
+    <lastmod>2019-02-17T14:46:36-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joestoica.com/tags/visualization/</loc>
+    <lastmod>2019-02-17T14:46:36-05:00</lastmod>
   </url>
   
   <url>
@@ -22,14 +57,6 @@
   
   <url>
     <loc>https://joestoica.com/categories/</loc>
-  </url>
-  
-  <url>
-    <loc>https://joestoica.com/projects/</loc>
-  </url>
-  
-  <url>
-    <loc>https://joestoica.com/tags/</loc>
   </url>
   
 </urlset>
