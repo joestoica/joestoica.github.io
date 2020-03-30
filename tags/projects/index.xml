@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>projects on Joe Stoica</title>
+    <link>http://joestoica.com/tags/projects/</link>
+    <description>Recent content in projects on Joe Stoica</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright> </copyright>
+    <lastBuildDate>Sat, 28 Mar 2020 12:27:13 -0500</lastBuildDate>
+    
+	<atom:link href="http://joestoica.com/tags/projects/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Journal Recreation: Approximate Bayesian computation for disease outbreaks</title>
+      <link>http://joestoica.com/work/mabc/</link>
+      <pubDate>Sat, 28 Mar 2020 12:27:13 -0500</pubDate>
+      
+      <guid>http://joestoica.com/work/mabc/</guid>
+      <description>This post is a summary of the final project that I completed for my Statistical Computing course in my first semester of grad school. The goal of this project was to recreate two figures from a paper authored by Tony and Stumpf, “Simulation-based model selection for dynamical systems in systems and population biology”(which can be found here). This paper uses the approximate bayesian computation (or ABC) algorithm to model a few fairly complex statistical models.</description>
+    </item>
+    
+    <item>
+      <title>Using 1.6 Million Tweets with a Markov Chain Text Generator</title>
+      <link>http://joestoica.com/work/markov_chain/</link>
+      <pubDate>Tue, 19 Feb 2019 18:18:25 -0500</pubDate>
+      
+      <guid>http://joestoica.com/work/markov_chain/</guid>
+      <description>During my daily dose of reddit browsing, I came across this post and was subsequently pretty confused. How can an office be THAT high? Amidst my bewilderment, I noticed that it came from the subreddit
+SubredditSimulator, and its hilarity immediately grabbed my attention. If you are unfamiliar with how Reddit operates, it is basically a giant forum split into thousands of subcommunities called &amp;ldquo;subreddits.&amp;rdquo; Users are allowed to subscribe to whatever subreddits they want to so they can regularly view its content, create posts in any subreddit, and comment on any post they like.</description>
+    </item>
+    
+    <item>
+      <title>Examining the 2016 Presidential Election</title>
+      <link>http://joestoica.com/work/election_2016/</link>
+      <pubDate>Wed, 19 Sep 2018 18:28:13 -0500</pubDate>
+      
+      <guid>http://joestoica.com/work/election_2016/</guid>
+      <description>A Leaflet map of the 2016 U.S. Election The United States 2016 presidential election seemed like it would be an easy victory for the DNC&amp;rsquo;s Hillary Clinton over the GOP&amp;rsquo;s Donald Trump.
+However, Trump came out the victor, depsite losing the popular vote by three million votes. This election has inspired me to dig deeper into the voting data. Through this investigation, I also wanted to become more familiar with choropleth maps in R, and make them interactive using the leaflet package.</description>
+    </item>
+    
+  </channel>
+</rss>
