@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>visualization on Joe Stoica</title>
-    <link>https://joestoica.com/tags/visualization/</link>
+    <link>http://joestoica.com/tags/visualization/</link>
     <description>Recent content in visualization on Joe Stoica</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright> </copyright>
     <lastBuildDate>Sun, 17 Feb 2019 14:46:36 -0500</lastBuildDate>
     
-	<atom:link href="https://joestoica.com/tags/visualization/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://joestoica.com/tags/visualization/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Remaking Visualizations from 538</title>
-      <link>https://joestoica.com/work/538/</link>
+      <link>http://joestoica.com/work/538/</link>
       <pubDate>Sun, 17 Feb 2019 14:46:36 -0500</pubDate>
       
-      <guid>https://joestoica.com/work/538/</guid>
+      <guid>http://joestoica.com/work/538/</guid>
       <description>Fivethirtyeight is one of my favorite news websites for interesting political articles and insightful sports predictions. Fivethirtyeight is spearheaded by Editor in Chief Nate Silver, the popular statistician who wrote the excellent book, The Signal and the Noise. But what I truly love about Fivethirtyeight is their unbiased and objective approach to their methodology, and how they present their data through their visualizations. They use a fairly clean and minimal style, following the idea of a low data-ink ratio, which is something I try to replicate in my own visualizations.</description>
     </item>
     
     <item>
       <title>Examining the 2016 Presidential Election</title>
-      <link>https://joestoica.com/work/election_2016/</link>
+      <link>http://joestoica.com/work/election_2016/</link>
       <pubDate>Wed, 19 Sep 2018 18:28:13 -0500</pubDate>
       
-      <guid>https://joestoica.com/work/election_2016/</guid>
+      <guid>http://joestoica.com/work/election_2016/</guid>
       <description>A Leaflet map of the 2016 U.S. Election The United States 2016 presidential election seemed like it would be an easy victory for the DNC&amp;rsquo;s Hillary Clinton over the GOP&amp;rsquo;s Donald Trump.
 However, Trump came out the victor, depsite losing the popular vote by three million votes. This election has inspired me to dig deeper into the voting data. Through this investigation, I also wanted to become more familiar with choropleth maps in R, and make them interactive using the leaflet package.</description>
     </item>
