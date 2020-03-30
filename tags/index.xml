@@ -7,10 +7,28 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright> </copyright>
-    <lastBuildDate>Sat, 28 Mar 2020 12:27:13 -0500</lastBuildDate>
+    <lastBuildDate>Sun, 29 Mar 2020 21:21:47 -0500</lastBuildDate>
     
 	<atom:link href="http://joestoica.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>college</title>
+      <link>http://joestoica.com/tags/college/</link>
+      <pubDate>Sun, 29 Mar 2020 21:21:47 -0500</pubDate>
+      
+      <guid>http://joestoica.com/tags/college/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>finance</title>
+      <link>http://joestoica.com/tags/finance/</link>
+      <pubDate>Sun, 29 Mar 2020 21:21:47 -0500</pubDate>
+      
+      <guid>http://joestoica.com/tags/finance/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>projects</title>
