@@ -1,11 +1,19 @@
+/* Custom CSS to override default */
+@import url("https://fonts.googleapis.com/css?family=Roboto:200,300,400");
+
 :root {
   --dark-background: #2F3437;
   --dark-background-secondary: #2F3437;
   --dark-header: #2F3437;
-  --dark-color: #fff;    
+  --dark-color: #fff;
 }
 
-.logo__cursor{
-    background: #3aacff;
+* {
+  font-weight: 100;
+  font-family: Roboto;
+  line-height: 1.75;
 }
-    
+
+.logo__cursor {
+  background: #3aacff;
+}

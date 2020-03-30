@@ -13,7 +13,7 @@
     
     
     <item>
-      <title>Projects</title>
+      <title>projects</title>
       <link>https://joestoica.com/tags/projects/</link>
       <pubDate>Sat, 28 Mar 2020 12:27:13 -0500</pubDate>
       
@@ -22,11 +22,20 @@
     </item>
     
     <item>
-      <title>Statistics</title>
+      <title>statistics</title>
       <link>https://joestoica.com/tags/statistics/</link>
       <pubDate>Sat, 28 Mar 2020 12:27:13 -0500</pubDate>
       
       <guid>https://joestoica.com/tags/statistics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R</title>
+      <link>https://joestoica.com/tags/r/</link>
+      <pubDate>Thu, 10 Oct 2019 18:28:13 -0500</pubDate>
+      
+      <guid>https://joestoica.com/tags/r/</guid>
       <description></description>
     </item>
     
