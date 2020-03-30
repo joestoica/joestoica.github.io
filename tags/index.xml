@@ -7,9 +7,64 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright> </copyright>
+    <lastBuildDate>Sun, 29 Mar 2020 21:21:47 -0500</lastBuildDate>
     
 	<atom:link href="http://joestoica.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>college</title>
+      <link>http://joestoica.com/tags/college/</link>
+      <pubDate>Sun, 29 Mar 2020 21:21:47 -0500</pubDate>
+      
+      <guid>http://joestoica.com/tags/college/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>finance</title>
+      <link>http://joestoica.com/tags/finance/</link>
+      <pubDate>Sun, 29 Mar 2020 21:21:47 -0500</pubDate>
+      
+      <guid>http://joestoica.com/tags/finance/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>projects</title>
+      <link>http://joestoica.com/tags/projects/</link>
+      <pubDate>Sat, 28 Mar 2020 12:27:13 -0500</pubDate>
+      
+      <guid>http://joestoica.com/tags/projects/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>statistics</title>
+      <link>http://joestoica.com/tags/statistics/</link>
+      <pubDate>Sat, 28 Mar 2020 12:27:13 -0500</pubDate>
+      
+      <guid>http://joestoica.com/tags/statistics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R</title>
+      <link>http://joestoica.com/tags/r/</link>
+      <pubDate>Thu, 10 Oct 2019 18:28:13 -0500</pubDate>
+      
+      <guid>http://joestoica.com/tags/r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>visualization</title>
+      <link>http://joestoica.com/tags/visualization/</link>
+      <pubDate>Sun, 17 Feb 2019 14:46:36 -0500</pubDate>
+      
+      <guid>http://joestoica.com/tags/visualization/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>
