@@ -2,14 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Joe Stoica</title>
-    <link>http://joestoica.com/</link>
+    <link>https://joestoica.com/</link>
     <description>Recent content on Joe Stoica</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright> </copyright>
+    <lastBuildDate>Sat, 28 Mar 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://joestoica.com/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://joestoica.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Now</title>
+      <link>https://joestoica.com/now/</link>
+      <pubDate>Sat, 28 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://joestoica.com/now/</guid>
+      <description>I had to move back home due to COVID-19.
+Currently reading In Pursuit of the Unknown, by Ian Stewart, and The Signal and the Noise, by Nate Silver.
+Currently working on migrating my old website to Hugo.</description>
+    </item>
+    
+    <item>
+      <title>About Me</title>
+      <link>https://joestoica.com/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://joestoica.com/about/</guid>
+      <description>Hi! My name is Joe Stoica. I&amp;rsquo;m a graduate student from Indiana University pursuing a master&amp;rsquo;s degree in statistical science. This coming summer, I&amp;rsquo;ll be interning at Cook Medical, where I&amp;rsquo;ll be a statistics intern in their Quality Engineering department. This previous summer I was the media analytics intern at MullenLowe Mediahub, where I assisted in data analysis and reporting for advertising campaigns.
+I&amp;rsquo;ve previously worked at Upland Brewing Co., where I compiled and analyzed supply chain data, and with the Cognitive Development Lab at IU, where I completed a semester long analysis project regarding the pathways for how children learn the mathematical concept of place value.</description>
+    </item>
+    
+    <item>
+      <title>Archive</title>
+      <link>https://joestoica.com/archive/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://joestoica.com/archive/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>
