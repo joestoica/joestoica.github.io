@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://joestoica.com/tags/blog/</loc>
+    <lastmod>2020-03-29T21:21:47-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://joestoica.com/tags/college/</loc>
     <lastmod>2020-03-29T21:21:47-05:00</lastmod>
   </url>
@@ -13,7 +18,7 @@
   </url>
   
   <url>
-    <loc>https://joestoica.com/work/college_finances/</loc>
+    <loc>https://joestoica.com/work/college_budget/</loc>
     <lastmod>2020-03-29T21:21:47-05:00</lastmod>
   </url>
   
@@ -80,6 +85,16 @@
   <url>
     <loc>https://joestoica.com/work/election_2016/</loc>
     <lastmod>2018-09-19T18:28:13-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joestoica.com/tags/organization/</loc>
+    <lastmod>2012-04-05T21:39:32-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joestoica.com/work/college_organization/</loc>
+    <lastmod>2012-04-05T21:39:32-05:00</lastmod>
   </url>
   
   <url>
