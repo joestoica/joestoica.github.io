@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright> </copyright>
-    <lastBuildDate>Sun, 29 Mar 2020 21:21:47 -0500</lastBuildDate>
+    <lastBuildDate>Sun, 05 Apr 2020 21:39:32 -0500</lastBuildDate>
     
 	<atom:link href="https://joestoica.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     <item>
       <title>blog</title>
       <link>https://joestoica.com/tags/blog/</link>
-      <pubDate>Sun, 29 Mar 2020 21:21:47 -0500</pubDate>
+      <pubDate>Sun, 05 Apr 2020 21:39:32 -0500</pubDate>
       
       <guid>https://joestoica.com/tags/blog/</guid>
       <description></description>
@@ -24,9 +24,18 @@
     <item>
       <title>college</title>
       <link>https://joestoica.com/tags/college/</link>
-      <pubDate>Sun, 29 Mar 2020 21:21:47 -0500</pubDate>
+      <pubDate>Sun, 05 Apr 2020 21:39:32 -0500</pubDate>
       
       <guid>https://joestoica.com/tags/college/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>organization</title>
+      <link>https://joestoica.com/tags/organization/</link>
+      <pubDate>Sun, 05 Apr 2020 21:39:32 -0500</pubDate>
+      
+      <guid>https://joestoica.com/tags/organization/</guid>
       <description></description>
     </item>
     
@@ -72,15 +81,6 @@
       <pubDate>Sun, 17 Feb 2019 14:46:36 -0500</pubDate>
       
       <guid>https://joestoica.com/tags/visualization/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>organization</title>
-      <link>https://joestoica.com/tags/organization/</link>
-      <pubDate>Thu, 05 Apr 2012 21:39:32 -0500</pubDate>
-      
-      <guid>https://joestoica.com/tags/organization/</guid>
       <description></description>
     </item>
     

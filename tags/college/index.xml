@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright> </copyright>
-    <lastBuildDate>Sun, 29 Mar 2020 21:21:47 -0500</lastBuildDate>
+    <lastBuildDate>Sun, 05 Apr 2020 21:39:32 -0500</lastBuildDate>
     
 	<atom:link href="https://joestoica.com/tags/college/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Productive College Life II: Organization</title>
+      <link>https://joestoica.com/work/college_organization/</link>
+      <pubDate>Sun, 05 Apr 2020 21:39:32 -0500</pubDate>
+      
+      <guid>https://joestoica.com/work/college_organization/</guid>
+      <description>Organizing your college life can be incredibly daunting. When I began as a freshman I can distinctly remember being overwhelmed by the sheer amount of new information being thrown at me daily. I now finally feel like I have a few methods for staying on top of my game and keeping my stress levels lower. So let&amp;rsquo;s explore how systematically keeping track of your schedule, emails, and files can keep your workflow as streamlined and efficient.</description>
+    </item>
     
     <item>
       <title>Productive College Life I: Budgeting</title>
@@ -19,15 +28,6 @@
       
       <guid>https://joestoica.com/work/college_budget/</guid>
       <description>I&amp;rsquo;ve been toying with the idea of writing a post like this for a few months now. There are endless blogs and vlogs offering tips and tricks to students on how to successfully navigate the minefield of being an independent college student for their first time. However, I feel like sharing the various technology and productivity strategies that have added structure to many aspects of my life, which in turn has allowed me to stress less about life and put more focus on being an organized and motivated student.</description>
-    </item>
-    
-    <item>
-      <title>Productive College Life II: Organization</title>
-      <link>https://joestoica.com/work/college_organization/</link>
-      <pubDate>Thu, 05 Apr 2012 21:39:32 -0500</pubDate>
-      
-      <guid>https://joestoica.com/work/college_organization/</guid>
-      <description>Organizing your college life can be incredibly daunting. When I began as a freshman I can distinctly remember being overwhelmed by the sheer amount of new information being thrown at me daily. I now finally feel like I have a few methods for staying on top of my game and keeping my stress levels lower. So let&amp;rsquo;s explore how systematically keeping track of your schedule, emails, and files can keep your workflow as streamlined and efficient.</description>
     </item>
     
   </channel>
